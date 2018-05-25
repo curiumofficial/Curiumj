@@ -110,8 +110,8 @@ public class CoinDefinition {
 
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
-        "dns0.curium.io",
-        "curium.seed.rho.industries"
+        "dnsseed.mrmetech.me",
+        "dns0.curiumofficial.com"
     };
 
     public static int minBroadcastConnections = 3;   //0 for default; we need more peers.
@@ -137,14 +137,14 @@ public class CoinDefinition {
     {
         Coin nSubsidy;
         if (nHeight == 0) {
-            nSubsidy = Coin.valueOf(17500000, 0);
+            nSubsidy = Coin.valueOf(5000000 , 0);
         } else if (nHeight > 0 && nHeight <= 200) {
             nSubsidy = Coin.valueOf(2500, 0);
-        } else if (nHeight > 200 && nHeight <= 250000) {
-            nSubsidy = Coin.valueOf(7, 0);
-        } else if (nHeight > 250000 && nHeight <= 518399) {
+        } else if (nHeight > 200 && nHeight <= 775600) {
+            nSubsidy = Coin.valueOf(5, 0);
+        } else if (nHeight > 775600 && nHeight <= 1043999) {
             nSubsidy = Coin.valueOf(4, 5);
-        } else if (nHeight > 518399 && nHeight <= 1036798) {
+        } else if (nHeight > 1043999 && nHeight <= 1562398) {
             nSubsidy = Coin.valueOf(3, 6);
         } else {
             nSubsidy = Coin.valueOf(2, 7);
@@ -175,10 +175,9 @@ public class CoinDefinition {
     //checkpoints.cpp Checkpoints::mapCheckpoints
     public static void initCheckpoints(Map<Integer, Sha256Hash> checkpoints)
     {
-        checkpoints.put(    0, Sha256Hash.wrap("2b1a0f66712aad59ad283662d5b919415a25921ce89511d73019107e380485bf"));
-        checkpoints.put( 1000, Sha256Hash.wrap("8defd49579d63545f9e8cdda31f8503e0513328ca3f7428f33a915258c764d15"));
-        checkpoints.put(10000, Sha256Hash.wrap("6af2431daa7456e4620e9493091648eeaac8ddfd53d8cff8101c26806e301d9a"));
-        checkpoints.put(90000, Sha256Hash.wrap("a883d86273f02cb19252a878d1e0bda1e5321140480b08e3df9544d7b3d1ce56"));;
+        checkpoints.put(    0, Sha256Hash.wrap("20438ea808f386bca78de64fc78320312af41d0d828763a9f5dd444d8ba7b54c"));
+        checkpoints.put( 268, Sha256Hash.wrap("987ed65cc54c2d261b0a01632f275f89fe1ad7eb68768474f6f7fb4377ae502a"));
+        checkpoints.put(4306, Sha256Hash.wrap("86fa05f5188d203a7c424a00f5c75350a899934bb35ec53af7aefd37f27a1c8d"));;
     }
 
     //Unit Test Information

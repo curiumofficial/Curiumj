@@ -72,7 +72,7 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         bip32HeaderPub =  0x3a8061a0; //0x043587cf;
         bip32HeaderPriv = 0x3a805837;  //0x04358394 ;
 
-        strSporkKey = "04348C2F50F90267E64FACC65BFDC9D0EB147D090872FB97ABAE92E9A36E6CA60983E28E741F8E7277B11A7479B626AC115BA31463AC48178A5075C5A9319D4A38";
+        strSporkKey = "04ba3e15d1276b37932e3861f920dedaa38e56ab9e1f05f789af06e763759652785bf96cc7375015abaaab6a58f18f20d022a3ccf7c0966f8781affee51dbc08f7";
 
      //   bip32HeaderPub = 0x043587CF;
      //   bip32HeaderPriv = 0x04358394;
