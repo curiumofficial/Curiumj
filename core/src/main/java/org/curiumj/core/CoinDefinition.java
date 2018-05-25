@@ -89,12 +89,12 @@ public class CoinDefinition {
 
     /** Zerocoin starting block height */
     public static final long TESTNET_ZEROCOIN_STARTING_BLOCK_HEIGHT = 201576;
-    public static final long MAINNET_ZEROCOIN_STARTING_BLOCK_HEIGHT = 89994;
+    public static final long MAINNET_ZEROCOIN_STARTING_BLOCK_HEIGHT = 90000;
 
     //
     //  Production
     //
-    public static final int AddressHeader = 55;             //base58.h CBitcoinAddress::PUBKEY_ADDRESS
+    public static final int AddressHeader = 60;             //base58.h CBitcoinAddress::PUBKEY_ADDRESS
     public static final int p2shHeader = 13;             //base58.h CBitcoinAddress::SCRIPT_ADDRESS
     public static final int dumpedPrivateKeyHeader = 128;   //common to all coins
     public static final long PacketMagic = 0x91c4fde9;  //0x91, 0xc4, 0xfd, 0xe9;
@@ -102,10 +102,10 @@ public class CoinDefinition {
 
     //Genesis Block Information from main.cpp: LoadBlockIndex
     static public long genesisBlockDifficultyTarget = 0x207fffff;         //main.cpp: LoadBlockIndex
-    static public long genesisBlockTime = 1505224800L;                       //main.cpp: LoadBlockIndex
-    static public long genesisBlockNonce = 12345;                         //main.cpp: LoadBlockIndex
-    static public String genesisHash = "2b1a0f66712aad59ad283662d5b919415a25921ce89511d73019107e380485bf";  //main.cpp: hashGenesisBlock
-    static public String genesisMerkleRoot = "894177137a45952cfed89dd395e7fc85208a53548f34defc7c1a85cb0736b3a3";
+    static public long genesisBlockTime = 1526939990;                       //main.cpp: LoadBlockIndex
+    static public long genesisBlockNonce = 0;                         //main.cpp: LoadBlockIndex
+    static public String genesisHash = "20438ea808f386bca78de64fc78320312af41d0d828763a9f5dd444d8ba7b54c";  //main.cpp: hashGenesisBlock
+    static public String genesisMerkleRoot = "8738140c726a5ee4eabd99024115280f825c57bae6decc2b14251b917152df4f";
     static public int genesisBlockValue = 0;                                                              //main.cpp: LoadBlockIndex
 
     //net.cpp strDNSSeed
@@ -123,7 +123,7 @@ public class CoinDefinition {
     public static final int testnetAddressHeader = 139;             //base58.h CBitcoinAddress::PUBKEY_ADDRESS_TEST
     public static final int testnetp2shHeader = 19;             //base58.h CBitcoinAddress::SCRIPT_ADDRESS_TEST
     public static final long testnetPacketMagic = 0x457665ba;      //
-    public static final String testnetGenesisHash =  "2b1a0f66712aad59ad283662d5b919415a25921ce89511d73019107e380485bf";
+    public static final String testnetGenesisHash =  "20438ea808f386bca78de64fc78320312af41d0d828763a9f5dd444d8ba7b54c";
     static public long testnetGenesisBlockDifficultyTarget = (0x1e0ffff0);         //main.cpp: LoadBlockIndex
     static public long testnetGenesisBlockTime = 1454124731L;                       //main.cpp: LoadBlockIndex
     static public long testnetGenesisBlockNonce = (2402015L);                         //main.cpp: LoadBlockIndex
