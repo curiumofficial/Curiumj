@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
-import org.phorej.wallet.Protos.Wallet.EncryptionType;
+import org.curiumj.wallet.Protos.Wallet.EncryptionType;
 import org.spongycastle.crypto.params.KeyParameter;
 
 import java.io.Serializable;

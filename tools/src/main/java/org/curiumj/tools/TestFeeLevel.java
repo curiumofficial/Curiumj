@@ -12,16 +12,16 @@
  * limitations under the License.
  */
 
-package org.phorej.tools;
+package org.curiumj.tools;
 
-import org.phorej.core.*;
-import org.phorej.core.listeners.PeerConnectedEventListener;
-import org.phorej.core.listeners.PeerDisconnectedEventListener;
-import org.phorej.kits.WalletAppKit;
-import org.phorej.params.MainNetParams;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.SendRequest;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.*;
+import org.curiumj.core.listeners.PeerConnectedEventListener;
+import org.curiumj.core.listeners.PeerDisconnectedEventListener;
+import org.curiumj.kits.WalletAppKit;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.SendRequest;
+import org.curiumj.wallet.Wallet;
 
 import java.io.File;
 

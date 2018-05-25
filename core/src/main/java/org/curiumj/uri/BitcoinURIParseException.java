@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.uri;
+package org.curiumj.uri;
 
 /**
- * <p>Exception to provide the following to {@link PhoreURI}:</p>
+ * <p>Exception to provide the following to {@link CuriumURI}:</p>
  * <ul>
  * <li>Provision of parsing error messages</li>
  * </ul>

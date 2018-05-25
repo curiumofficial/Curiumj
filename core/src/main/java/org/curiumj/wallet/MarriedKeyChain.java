@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
 
-import org.phorej.core.BloomFilter;
-import org.phorej.core.ECKey;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.Utils;
-import org.phorej.crypto.DeterministicKey;
-import org.phorej.crypto.KeyCrypter;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
+import org.curiumj.core.BloomFilter;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.Utils;
+import org.curiumj.crypto.DeterministicKey;
+import org.curiumj.crypto.KeyCrypter;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

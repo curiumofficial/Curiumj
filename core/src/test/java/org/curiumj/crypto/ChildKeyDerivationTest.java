@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
-import org.phorej.core.*;
-import org.phorej.params.*;
-import org.phorej.wallet.DeterministicKeyChain;
+import org.curiumj.core.*;
+import org.curiumj.params.*;
+import org.curiumj.wallet.DeterministicKeyChain;
 import org.junit.*;
 import org.spongycastle.crypto.params.*;
 
-import static org.phorej.core.Utils.*;
+import static org.curiumj.core.Utils.*;
 import static org.junit.Assert.*;
 
 /**

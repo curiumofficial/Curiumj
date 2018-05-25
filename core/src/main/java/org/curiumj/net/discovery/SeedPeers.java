@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.net.discovery;
+package org.curiumj.net.discovery;
 
-import org.phorej.core.NetworkParameters;
+import org.curiumj.core.NetworkParameters;
 
 import javax.annotation.Nullable;
 import java.net.InetAddress;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.utils;
+package org.curiumj.utils;
 
-import org.phorej.core.Coin;
+import org.curiumj.core.Coin;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -29,12 +29,12 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.phorej.core.Coin.*;
-import static org.phorej.core.NetworkParameters.MAX_MONEY;
-import static org.phorej.utils.BtcAutoFormat.Style.CODE;
-import static org.phorej.utils.BtcAutoFormat.Style.SYMBOL;
-import static org.phorej.utils.BtcFixedFormat.REPEATING_DOUBLETS;
-import static org.phorej.utils.BtcFixedFormat.REPEATING_TRIPLETS;
+import static org.curiumj.core.Coin.*;
+import static org.curiumj.core.NetworkParameters.MAX_MONEY;
+import static org.curiumj.utils.BtcAutoFormat.Style.CODE;
+import static org.curiumj.utils.BtcAutoFormat.Style.SYMBOL;
+import static org.curiumj.utils.BtcFixedFormat.REPEATING_DOUBLETS;
+import static org.curiumj.utils.BtcFixedFormat.REPEATING_TRIPLETS;
 import static java.text.NumberFormat.Field.DECIMAL_SEPARATOR;
 import static java.util.Locale.*;
 import static org.junit.Assert.*;

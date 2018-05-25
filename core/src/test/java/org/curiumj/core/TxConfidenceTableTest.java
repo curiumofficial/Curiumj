@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.params.*;
-import org.phorej.testing.*;
-import org.phorej.utils.*;
+import org.curiumj.params.*;
+import org.curiumj.testing.*;
+import org.curiumj.utils.*;
 import org.junit.*;
 
 import java.net.*;
 
-import static org.phorej.core.Coin.*;
+import static org.curiumj.core.Coin.*;
 import static org.junit.Assert.*;
 
 public class TxConfidenceTableTest {

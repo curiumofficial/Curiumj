@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.*;
-import org.phorej.params.MainNetParams;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.*;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.wallet.Wallet;
 
 import java.math.BigInteger;
 import java.net.InetAddress;

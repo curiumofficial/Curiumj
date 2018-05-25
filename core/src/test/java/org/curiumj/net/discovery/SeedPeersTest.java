@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.phorej.net.discovery;
+package org.curiumj.net.discovery;
 
-import org.phorej.params.MainNetParams;
+import org.curiumj.params.MainNetParams;
 import org.junit.Test;
 
 import java.net.InetSocketAddress;

@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
-import org.phorej.core.*;
-import org.phorej.params.UnitTestParams;
-import org.phorej.store.BlockStore;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.*;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.Wallet;
 
 import javax.annotation.Nullable;
 
-import static org.phorej.testing.FakeTxBuilder.createFakeBlock;
-import static org.phorej.testing.FakeTxBuilder.createFakeTx;
+import static org.curiumj.testing.FakeTxBuilder.createFakeBlock;
+import static org.curiumj.testing.FakeTxBuilder.createFakeTx;
 
 // TODO: This needs to be somewhat rewritten - the "sendMoneyToWallet" methods aren't sending via the block chain object
 

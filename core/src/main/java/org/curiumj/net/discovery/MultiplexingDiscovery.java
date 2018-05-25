@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.phorej.net.discovery;
+package org.curiumj.net.discovery;
 
 import com.google.common.collect.Lists;
 import com.squareup.okhttp.OkHttpClient;
 
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.VersionMessage;
-import org.phorej.net.discovery.DnsDiscovery.DnsSeedDiscovery;
-import org.phorej.utils.*;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.VersionMessage;
+import org.curiumj.net.discovery.DnsDiscovery.DnsSeedDiscovery;
+import org.curiumj.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

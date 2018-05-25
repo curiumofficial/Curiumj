@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
-import org.phorej.core.*;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.*;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

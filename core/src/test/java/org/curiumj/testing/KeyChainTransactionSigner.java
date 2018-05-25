@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
-import org.phorej.core.Sha256Hash;
-import org.phorej.crypto.ChildNumber;
-import org.phorej.crypto.DeterministicKey;
-import org.phorej.signers.CustomTransactionSigner;
-import org.phorej.wallet.DeterministicKeyChain;
+import org.curiumj.core.Sha256Hash;
+import org.curiumj.crypto.ChildNumber;
+import org.curiumj.crypto.DeterministicKey;
+import org.curiumj.signers.CustomTransactionSigner;
+import org.curiumj.wallet.DeterministicKeyChain;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;

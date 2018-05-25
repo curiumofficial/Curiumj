@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.*;
-import org.phorej.crypto.*;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.UnitTestParams;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.listeners.AbstractKeyChainEventListener;
+import org.curiumj.core.*;
+import org.curiumj.crypto.*;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.listeners.AbstractKeyChainEventListener;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;

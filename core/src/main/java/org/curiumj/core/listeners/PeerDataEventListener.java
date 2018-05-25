@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 
 /**
  * <p>Implementors can listen to events like blocks being downloaded/transactions being broadcast/connect/disconnects,

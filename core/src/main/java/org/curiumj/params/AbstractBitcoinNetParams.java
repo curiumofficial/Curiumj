@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.phorej.params;
+package org.curiumj.params;
 
 import java.math.BigInteger;
 import java.util.concurrent.TimeUnit;
 
-import org.phorej.core.*;
-import org.phorej.utils.MonetaryFormat;
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
+import org.curiumj.core.*;
+import org.curiumj.utils.MonetaryFormat;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

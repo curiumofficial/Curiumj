@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.script.Script;
-import org.phorej.wallet.WalletTransaction;
+import org.curiumj.script.Script;
+import org.curiumj.wallet.WalletTransaction;
 
 import java.util.Map;
 
 /**
- * This interface is used to abstract the {@link org.phorej.wallet.Wallet} and the {@link org.phorej.core.Transaction}
+ * This interface is used to abstract the {@link org.curiumj.wallet.Wallet} and the {@link org.curiumj.core.Transaction}
  */
 public interface TransactionBag {
     /** Returns true if this wallet contains a public key which hashes to the given hash. */

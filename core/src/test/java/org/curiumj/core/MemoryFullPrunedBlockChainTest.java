@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.store.BlockStoreException;
-import org.phorej.store.FullPrunedBlockStore;
-import org.phorej.store.MemoryFullPrunedBlockStore;
+import org.curiumj.store.BlockStoreException;
+import org.curiumj.store.FullPrunedBlockStore;
+import org.curiumj.store.MemoryFullPrunedBlockStore;
 
 /**
  * A MemoryStore implementation of the FullPrunedBlockStoreTest

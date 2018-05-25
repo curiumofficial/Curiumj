@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
-import org.phorej.core.listeners.PeerDisconnectedEventListener;
-import org.phorej.core.listeners.PreMessageReceivedEventListener;
-import org.phorej.core.*;
-import org.phorej.net.*;
-import org.phorej.params.UnitTestParams;
-import org.phorej.store.BlockStore;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.listeners.PeerDisconnectedEventListener;
+import org.curiumj.core.listeners.PreMessageReceivedEventListener;
+import org.curiumj.core.*;
+import org.curiumj.net.*;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.Wallet;
 
 import com.google.common.util.concurrent.SettableFuture;
 

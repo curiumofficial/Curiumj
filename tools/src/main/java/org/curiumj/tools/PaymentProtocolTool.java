@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.phorej.tools;
+package org.curiumj.tools;
 
-import org.phorej.crypto.TrustStoreLoader;
-import org.phorej.protocols.payments.PaymentProtocol;
-import org.phorej.protocols.payments.PaymentProtocolException;
-import org.phorej.protocols.payments.PaymentSession;
-import org.phorej.uri.PhoreURI;
-import org.phorej.uri.BitcoinURIParseException;
+import org.curiumj.crypto.TrustStoreLoader;
+import org.curiumj.protocols.payments.PaymentProtocol;
+import org.curiumj.protocols.payments.PaymentProtocolException;
+import org.curiumj.protocols.payments.PaymentSession;
+import org.curiumj.uri.CuriumURI;
+import org.curiumj.uri.BitcoinURIParseException;
 import org.bitcoin.protocols.payments.Protos;
 
 import java.io.FileInputStream;
@@ -58,7 +58,7 @@ public class PaymentProtocolTool {
             } else if ("http".equals(uri.getScheme())) {
                 session = PaymentSession.createFromUrl(arg).get();
             } else if ("bitcoin".equals(uri.getScheme())) {
-                PhoreURI bcuri = new PhoreURI(arg);
+                CuriumURI bcuri = new CuriumURI(arg);
                 final String paymentRequestUrl = bcuri.getPaymentRequestUrl();
                 if (paymentRequestUrl == null) {
                     System.err.println("No r= param in bitcoin URI");

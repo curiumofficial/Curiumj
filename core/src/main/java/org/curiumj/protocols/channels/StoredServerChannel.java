@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.channels;
+package org.curiumj.protocols.channels;
 
-import org.phorej.core.*;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.*;
+import org.curiumj.wallet.Wallet;
 
 import javax.annotation.Nullable;
 import java.util.Date;
@@ -88,7 +88,7 @@ public class StoredServerChannel {
     }
 
     /**
-     * If a handler is connected, call its {@link org.phorej.protocols.channels.PaymentChannelServer#close()}
+     * If a handler is connected, call its {@link org.curiumj.protocols.channels.PaymentChannelServer#close()}
      * method thus disconnecting the TCP connection.
      */
     synchronized void closeConnectedHandler() {

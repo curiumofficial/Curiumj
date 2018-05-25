@@ -1,4 +1,4 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

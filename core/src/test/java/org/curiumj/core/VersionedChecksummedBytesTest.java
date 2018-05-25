@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.params.MainNetParams;
-import org.phorej.params.TestNet3Params;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.TestNet3Params;
 import org.junit.Test;
 
-import static org.phorej.core.Utils.HEX;
+import static org.curiumj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;

@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.phorej.jni;
+package org.curiumj.jni;
 
-import org.phorej.protocols.channels.PaymentChannelServerListener;
-import org.phorej.protocols.channels.ServerConnectionEventHandler;
+import org.curiumj.protocols.channels.PaymentChannelServerListener;
+import org.curiumj.protocols.channels.ServerConnectionEventHandler;
 
 import javax.annotation.Nullable;
 import java.net.SocketAddress;

@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.base.*;
 import com.google.common.collect.*;
 import com.google.common.util.concurrent.*;
-import org.phorej.core.listeners.*;
-import org.phorej.net.*;
-import org.phorej.params.*;
-import org.phorej.store.*;
-import org.phorej.utils.*;
+import org.curiumj.core.listeners.*;
+import org.curiumj.net.*;
+import org.curiumj.params.*;
+import org.curiumj.store.*;
+import org.curiumj.utils.*;
 import org.slf4j.*;
 
 import java.io.*;

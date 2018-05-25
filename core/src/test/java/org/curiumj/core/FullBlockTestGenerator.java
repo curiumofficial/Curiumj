@@ -12,14 +12,14 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import org.phorej.core.Transaction.SigHash;
-import org.phorej.crypto.TransactionSignature;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
+import org.curiumj.core.Transaction.SigHash;
+import org.curiumj.crypto.TransactionSignature;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
 import com.google.common.base.Preconditions;
 
 import javax.annotation.Nullable;
@@ -30,8 +30,8 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static org.phorej.core.Coin.*;
-import static org.phorej.script.ScriptOpCodes.*;
+import static org.curiumj.core.Coin.*;
+import static org.curiumj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 

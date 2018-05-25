@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.Transaction;
+import org.curiumj.core.Transaction;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
- * Stores data about a transaction that is only relevant to the {@link org.phorej.wallet.Wallet} class.
+ * Stores data about a transaction that is only relevant to the {@link org.curiumj.wallet.Wallet} class.
  */
 public class WalletTransaction {
     public enum Pool {

@@ -1,8 +1,8 @@
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.Transaction;
-import org.phorej.core.TransactionConfidence;
-import org.phorej.params.RegTestParams;
+import org.curiumj.core.Transaction;
+import org.curiumj.core.TransactionConfidence;
+import org.curiumj.params.RegTestParams;
 
 /**
  * Created by Eric on 1/15/2016.

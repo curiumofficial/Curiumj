@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.store.BlockStoreException;
-import org.phorej.store.FullPrunedBlockStore;
-import org.phorej.store.LevelDBFullPrunedBlockStore;
+import org.curiumj.store.BlockStoreException;
+import org.curiumj.store.FullPrunedBlockStore;
+import org.curiumj.store.LevelDBFullPrunedBlockStore;
 import org.junit.After;
 
 import java.io.File;

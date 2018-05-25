@@ -15,22 +15,22 @@
  * limitations under the License.
  */
 
-package org.phorej.tools;
+package org.curiumj.tools;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import com.google.common.collect.ImmutableList;
-import org.phorej.core.listeners.*;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.Peer;
-import org.phorej.core.PeerGroup;
-import org.phorej.core.Transaction;
-import org.phorej.net.discovery.DnsDiscovery;
-import org.phorej.params.MainNetParams;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.DefaultRiskAnalysis;
-import org.phorej.wallet.RiskAnalysis.Result;
+import org.curiumj.core.listeners.*;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.Peer;
+import org.curiumj.core.PeerGroup;
+import org.curiumj.core.Transaction;
+import org.curiumj.net.discovery.DnsDiscovery;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.DefaultRiskAnalysis;
+import org.curiumj.wallet.RiskAnalysis.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

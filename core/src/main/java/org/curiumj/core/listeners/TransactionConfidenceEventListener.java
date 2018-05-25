@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.Transaction;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.Transaction;
+import org.curiumj.wallet.Wallet;
 
 /**
  * <p>Implementors are called when confidence of a transaction changes.</p>

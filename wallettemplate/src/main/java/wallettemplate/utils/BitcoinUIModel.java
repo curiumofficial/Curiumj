@@ -14,10 +14,10 @@
 
 package wallettemplate.utils;
 
-import org.phorej.core.listeners.DownloadProgressTracker;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.listeners.WalletChangeEventListener;
-import org.phorej.core.*;
+import org.curiumj.core.listeners.DownloadProgressTracker;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.listeners.WalletChangeEventListener;
+import org.curiumj.core.*;
 import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.beans.property.ReadOnlyObjectProperty;

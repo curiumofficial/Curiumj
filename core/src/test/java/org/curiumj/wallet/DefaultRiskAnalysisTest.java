@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
 import com.google.common.collect.*;
-import org.phorej.core.*;
-import org.phorej.crypto.*;
-import org.phorej.params.*;
-import org.phorej.script.*;
-import org.phorej.testing.FakeTxBuilder;
-import org.phorej.wallet.DefaultRiskAnalysis.*;
+import org.curiumj.core.*;
+import org.curiumj.crypto.*;
+import org.curiumj.params.*;
+import org.curiumj.script.*;
+import org.curiumj.testing.FakeTxBuilder;
+import org.curiumj.wallet.DefaultRiskAnalysis.*;
 import org.junit.*;
 
 import java.util.*;
 
-import static org.phorej.core.Coin.*;
-import static org.phorej.script.ScriptOpCodes.*;
+import static org.curiumj.core.Coin.*;
+import static org.curiumj.script.ScriptOpCodes.*;
 import static org.junit.Assert.*;
 
 public class DefaultRiskAnalysisTest {

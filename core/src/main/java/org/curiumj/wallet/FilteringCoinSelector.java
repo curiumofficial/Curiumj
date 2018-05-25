@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 
 import java.util.HashSet;
 import java.util.Iterator;

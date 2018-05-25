@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.core.listeners.TransactionConfidenceEventListener;
-import org.phorej.core.TransactionConfidence.ConfidenceType;
-import org.phorej.params.UnitTestParams;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.testing.FakeTxBuilder;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.WalletTransaction;
-import org.phorej.wallet.listeners.WalletChangeEventListener;
-import org.phorej.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.phorej.wallet.listeners.WalletReorganizeEventListener;
+import org.curiumj.core.listeners.TransactionConfidenceEventListener;
+import org.curiumj.core.TransactionConfidence.ConfidenceType;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.testing.FakeTxBuilder;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.WalletTransaction;
+import org.curiumj.wallet.listeners.WalletChangeEventListener;
+import org.curiumj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.curiumj.wallet.listeners.WalletReorganizeEventListener;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.phorej.core.Coin.*;
+import static org.curiumj.core.Coin.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

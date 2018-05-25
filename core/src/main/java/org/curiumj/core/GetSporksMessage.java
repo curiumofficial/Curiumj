@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 /**
  * Represents the "getaddr" P2P protocol message, which requests network {@link AddressMessage}s from a peer. Not to

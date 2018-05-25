@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.params.MainNetParams;
-import org.phorej.params.UnitTestParams;
-import org.phorej.store.BlockStore;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.wallet.Wallet;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.wallet.Wallet;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,10 +29,10 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import static org.phorej.core.Coin.*;
-import static org.phorej.core.Utils.HEX;
-import static org.phorej.testing.FakeTxBuilder.createFakeBlock;
-import static org.phorej.testing.FakeTxBuilder.createFakeTx;
+import static org.curiumj.core.Coin.*;
+import static org.curiumj.core.Utils.HEX;
+import static org.curiumj.testing.FakeTxBuilder.createFakeBlock;
+import static org.curiumj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 
 public class ParseByteCacheTest {

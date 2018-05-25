@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.listeners.PeerConnectedEventListener;
-import org.phorej.core.listeners.PeerDisconnectedEventListener;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.Peer;
-import org.phorej.core.PeerGroup;
-import org.phorej.net.discovery.DnsDiscovery;
-import org.phorej.params.MainNetParams;
-import org.phorej.utils.BriefLogFormatter;
+import org.curiumj.core.listeners.PeerConnectedEventListener;
+import org.curiumj.core.listeners.PeerDisconnectedEventListener;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.Peer;
+import org.curiumj.core.PeerGroup;
+import org.curiumj.net.discovery.DnsDiscovery;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

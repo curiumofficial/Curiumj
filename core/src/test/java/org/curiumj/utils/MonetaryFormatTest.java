@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.phorej.utils;
+package org.curiumj.utils;
 
-import static org.phorej.core.Coin.CENT;
-import static org.phorej.core.Coin.COIN;
-import static org.phorej.core.Coin.SATOSHI;
-import static org.phorej.core.Coin.ZERO;
+import static org.curiumj.core.Coin.CENT;
+import static org.curiumj.core.Coin.COIN;
+import static org.curiumj.core.Coin.SATOSHI;
+import static org.curiumj.core.Coin.ZERO;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Locale;
 
 import org.junit.Test;
 
-import org.phorej.core.Coin;
+import org.curiumj.core.Coin;
 
 public class MonetaryFormatTest {
 

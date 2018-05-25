@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.net;
+package org.curiumj.net;
 
-import org.phorej.core.Utils;
-import org.phorej.utils.Threading;
+import org.curiumj.core.Utils;
+import org.curiumj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.MessageLite;

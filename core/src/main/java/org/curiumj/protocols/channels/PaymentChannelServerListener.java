@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.channels;
+package org.curiumj.protocols.channels;
 
-import org.phorej.core.Coin;
-import org.phorej.core.Sha256Hash;
-import org.phorej.core.TransactionBroadcaster;
-import org.phorej.net.NioServer;
-import org.phorej.net.ProtobufConnection;
-import org.phorej.net.StreamConnectionFactory;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.Coin;
+import org.curiumj.core.Sha256Hash;
+import org.curiumj.core.TransactionBroadcaster;
+import org.curiumj.net.NioServer;
+import org.curiumj.net.ProtobufConnection;
+import org.curiumj.net.StreamConnectionFactory;
+import org.curiumj.wallet.Wallet;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;

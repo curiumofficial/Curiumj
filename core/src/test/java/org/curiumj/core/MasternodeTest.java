@@ -1,6 +1,6 @@
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.params.MainNetParams;
+import org.curiumj.params.MainNetParams;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 /**

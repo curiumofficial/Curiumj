@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.signers;
+package org.curiumj.signers;
 
 /**
  * A signer that doesn't have any state to be serialized.

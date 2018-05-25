@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.channels;
+package org.curiumj.protocols.channels;
 
 import com.google.common.collect.ImmutableMap;
-import org.phorej.core.*;
-import org.phorej.protocols.channels.PaymentChannelCloseException.CloseReason;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.*;
+import org.curiumj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

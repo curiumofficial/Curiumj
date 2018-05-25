@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.testing.FooWalletExtension;
-import org.phorej.testing.TestWithWallet;
+import org.curiumj.testing.FooWalletExtension;
+import org.curiumj.testing.TestWithWallet;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -12,19 +12,19 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.listeners.PreMessageReceivedEventListener;
-import org.phorej.core.*;
-import org.phorej.kits.WalletAppKit;
-import org.phorej.params.RegTestParams;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.listeners.PreMessageReceivedEventListener;
+import org.curiumj.core.*;
+import org.curiumj.kits.WalletAppKit;
+import org.curiumj.params.RegTestParams;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.Wallet;
 
 import java.io.File;
 
-import static org.phorej.core.Coin.*;
+import static org.curiumj.core.Coin.*;
 
 /**
  * This is a little test app that waits for a coin on a local regtest node, then  generates two transactions that double

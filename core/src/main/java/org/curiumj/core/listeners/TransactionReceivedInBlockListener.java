@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.BlockChain;
-import org.phorej.core.Sha256Hash;
-import org.phorej.core.StoredBlock;
-import org.phorej.core.Transaction;
-import org.phorej.core.VerificationException;
+import org.curiumj.core.BlockChain;
+import org.curiumj.core.Sha256Hash;
+import org.curiumj.core.StoredBlock;
+import org.curiumj.core.Transaction;
+import org.curiumj.core.VerificationException;
 
 /**
  * Listener interface for when we receive a new block that contains a relevant

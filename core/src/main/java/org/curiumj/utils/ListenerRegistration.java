@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.utils;
+package org.curiumj.utils;
 
 import java.util.List;
 import java.util.concurrent.Executor;

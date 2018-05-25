@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.phorej.utils;
+package org.curiumj.utils;
 
-import org.phorej.core.Block;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.ProtocolException;
-import org.phorej.core.Utils;
+import org.curiumj.core.Block;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.ProtocolException;
+import org.curiumj.core.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;

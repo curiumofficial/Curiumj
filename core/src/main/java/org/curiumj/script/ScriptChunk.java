@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.phorej.script;
+package org.curiumj.script;
 
-import org.phorej.core.Utils;
+import org.curiumj.core.Utils;
 import com.google.common.base.Objects;
 
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ import java.io.OutputStream;
 import java.util.Arrays;
 
 import static com.google.common.base.Preconditions.checkState;
-import static org.phorej.script.ScriptOpCodes.*;
+import static org.curiumj.script.ScriptOpCodes.*;
 
 /**
  * A script element that is either a data push (signature, pubkey, etc) or a non-push (logic, numeric, etc) operation.

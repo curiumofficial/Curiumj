@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.script.Script;
-import org.phorej.script.Script.VerifyFlag;
-import org.phorej.store.BlockStoreException;
-import org.phorej.store.FullPrunedBlockStore;
-import org.phorej.utils.*;
-import org.phorej.wallet.Wallet;
+import org.curiumj.script.Script;
+import org.curiumj.script.Script.VerifyFlag;
+import org.curiumj.store.BlockStoreException;
+import org.curiumj.store.FullPrunedBlockStore;
+import org.curiumj.utils.*;
+import org.curiumj.wallet.Wallet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

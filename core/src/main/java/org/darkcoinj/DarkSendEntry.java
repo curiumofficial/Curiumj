@@ -1,6 +1,6 @@
 package org.darkcoinj;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 /**
  * Created by Eric on 2/12/2017.

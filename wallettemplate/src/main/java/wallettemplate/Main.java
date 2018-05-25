@@ -16,12 +16,12 @@ package wallettemplate;
 
 import com.google.common.util.concurrent.*;
 import javafx.scene.input.*;
-import org.phorej.core.NetworkParameters;
-import org.phorej.kits.WalletAppKit;
-import org.phorej.params.*;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.DeterministicSeed;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.kits.WalletAppKit;
+import org.curiumj.params.*;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.DeterministicSeed;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;

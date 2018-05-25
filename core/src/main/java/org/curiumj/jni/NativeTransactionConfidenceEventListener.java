@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.phorej.jni;
+package org.curiumj.jni;
 
-import org.phorej.core.listeners.TransactionConfidenceEventListener;
-import org.phorej.wallet.Wallet;
-import org.phorej.core.Transaction;
+import org.curiumj.core.listeners.TransactionConfidenceEventListener;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.core.Transaction;
 
 /**
  * An event listener that relays events to a native C++ object. A pointer to that object is stored in

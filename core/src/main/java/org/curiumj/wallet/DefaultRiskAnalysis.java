@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.Coin;
-import org.phorej.core.ECKey;
-import org.phorej.core.ECKey.ECDSASignature;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.Transaction;
-import org.phorej.core.TransactionConfidence;
-import org.phorej.core.TransactionInput;
-import org.phorej.core.TransactionOutput;
-import org.phorej.crypto.TransactionSignature;
-import org.phorej.script.ScriptChunk;
+import org.curiumj.core.Coin;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.ECKey.ECDSASignature;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.Transaction;
+import org.curiumj.core.TransactionConfidence;
+import org.curiumj.core.TransactionInput;
+import org.curiumj.core.TransactionOutput;
+import org.curiumj.crypto.TransactionSignature;
+import org.curiumj.script.ScriptChunk;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -114,7 +114,7 @@ public class DefaultRiskAnalysis implements RiskAnalysis {
 
     /**
      * The reason a transaction is considered non-standard, returned by
-     * {@link #isStandard(org.phorej.core.Transaction)}.
+     * {@link #isStandard(org.curiumj.core.Transaction)}.
      */
     public enum RuleViolation {
         NONE,

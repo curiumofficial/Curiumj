@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.util.concurrent.*;
-import org.phorej.core.listeners.TransactionConfidenceEventListener;
-import org.phorej.testing.*;
-import org.phorej.utils.*;
-import org.phorej.wallet.SendRequest;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.listeners.TransactionConfidenceEventListener;
+import org.curiumj.testing.*;
+import org.curiumj.utils.*;
+import org.curiumj.wallet.SendRequest;
+import org.curiumj.wallet.Wallet;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -31,7 +31,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 import static com.google.common.base.Preconditions.*;
-import static org.phorej.core.Coin.*;
+import static org.curiumj.core.Coin.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)

@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.phorej.store;
+package org.curiumj.store;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 
 import java.sql.*;
 import java.util.ArrayList;

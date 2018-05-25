@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
 import static org.fusesource.leveldbjni.JniDBFactory.*;
 

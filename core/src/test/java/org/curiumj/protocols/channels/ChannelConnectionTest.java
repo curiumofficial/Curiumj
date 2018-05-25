@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.channels;
+package org.curiumj.protocols.channels;
 
-import org.phorej.core.*;
-import org.phorej.testing.TestWithWallet;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.WalletExtension;
-import org.phorej.wallet.WalletFiles;
-import org.phorej.wallet.WalletProtobufSerializer;
+import org.curiumj.core.*;
+import org.curiumj.testing.TestWithWallet;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.WalletExtension;
+import org.curiumj.wallet.WalletFiles;
+import org.curiumj.wallet.WalletProtobufSerializer;
 
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -47,9 +47,9 @@ import java.util.Collection;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static org.phorej.core.Coin.*;
-import static org.phorej.protocols.channels.PaymentChannelCloseException.CloseReason;
-import static org.phorej.testing.FakeTxBuilder.createFakeBlock;
+import static org.curiumj.core.Coin.*;
+import static org.curiumj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import static org.curiumj.testing.FakeTxBuilder.createFakeBlock;
 import static org.bitcoin.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
 import static org.junit.Assert.*;
 
@@ -60,7 +60,7 @@ public class ChannelConnectionTest extends TestWithWallet {
     private AtomicBoolean fail;
     private BlockingQueue<Transaction> broadcasts;
     private TransactionBroadcaster mockBroadcaster;
-    private Semaphore broadcastTxPause;
+    private Semacurium broadcastTxPause;
 
     private static final TransactionBroadcaster failBroadcaster = new TransactionBroadcaster() {
         @Override
@@ -121,9 +121,9 @@ public class ChannelConnectionTest extends TestWithWallet {
         fail = new AtomicBoolean(false);
 
         // Set up a way to monitor broadcast transactions. When you expect a broadcast, you must release a permit
-        // to the broadcastTxPause semaphore so state can be queried in between.
+        // to the broadcastTxPause semacurium so state can be queried in between.
         broadcasts = new LinkedBlockingQueue<Transaction>();
-        broadcastTxPause = new Semaphore(0);
+        broadcastTxPause = new Semacurium(0);
         mockBroadcaster = new TransactionBroadcaster() {
             @Override
             public TransactionBroadcast broadcastTransaction(Transaction tx) {
@@ -560,7 +560,7 @@ public class ChannelConnectionTest extends TestWithWallet {
     private static Wallet roundTripClientWallet(Wallet wallet) throws Exception {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
-        org.phorej.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.curiumj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         StoredPaymentChannelClientStates state = new StoredPaymentChannelClientStates(null, failBroadcaster);
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
@@ -569,7 +569,7 @@ public class ChannelConnectionTest extends TestWithWallet {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
         StoredPaymentChannelServerStates state = new StoredPaymentChannelServerStates(null, failBroadcaster);
-        org.phorej.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.curiumj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
 

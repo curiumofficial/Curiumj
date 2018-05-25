@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet.listeners;
+package org.curiumj.wallet.listeners;
 
-import org.phorej.core.ECKey;
-import org.phorej.wallet.KeyChain;
+import org.curiumj.core.ECKey;
+import org.curiumj.wallet.KeyChain;
 
 import java.util.List;
 

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.phorej.jni;
+package org.curiumj.jni;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 
 import java.util.List;
-import org.phorej.core.listeners.NewBestBlockListener;
-import org.phorej.core.listeners.ReorganizeListener;
-import org.phorej.core.listeners.TransactionReceivedInBlockListener;
+import org.curiumj.core.listeners.NewBestBlockListener;
+import org.curiumj.core.listeners.ReorganizeListener;
+import org.curiumj.core.listeners.TransactionReceivedInBlockListener;
 
 /**
  * An event listener that relays events to a native C++ object. A pointer to that object is stored in

@@ -1,4 +1,4 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 import java.util.Collection;
 import java.util.HashMap;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.channels;
+package org.curiumj.protocols.channels;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import org.phorej.core.*;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.WalletExtension;
+import org.curiumj.core.*;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.WalletExtension;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.HashMultimap;

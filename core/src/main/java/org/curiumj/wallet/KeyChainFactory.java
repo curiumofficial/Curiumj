@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.crypto.DeterministicKey;
-import org.phorej.crypto.KeyCrypter;
+import org.curiumj.crypto.DeterministicKey;
+import org.curiumj.crypto.KeyCrypter;
 
 /**
  * Factory interface for creation keychains while de-serializing a wallet.

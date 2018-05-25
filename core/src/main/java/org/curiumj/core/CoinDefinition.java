@@ -1,4 +1,4 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 import java.math.BigInteger;
 import java.util.Map;
@@ -11,9 +11,9 @@ import java.util.Map;
  */
 public class CoinDefinition {
 
-    public static final String coinName = "Phore";
+    public static final String coinName = "Curium";
     public static final String coinTicker = "PHR";
-    public static final String coinURIScheme = "phore";
+    public static final String coinURIScheme = "curium";
     public static final String cryptsyMarketId = "155";
     public static final String cryptsyMarketCurrency = "PHR";
 
@@ -73,7 +73,7 @@ public class CoinDefinition {
     public static final boolean feeCanBeRaised = false;
 
     //
-    // Phore 0.12
+    // Curium 0.12
     //
     public static final int PROTOCOL_VERSION = 70002;          //version.h PROTOCOL_VERSION
     public static final int MIN_PROTOCOL_VERSION = 70002;        //version.h MIN_PROTO_VERSION
@@ -110,8 +110,8 @@ public class CoinDefinition {
 
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
-        "dns0.phore.io",
-        "phore.seed.rho.industries"
+        "dns0.curium.io",
+        "curium.seed.rho.industries"
     };
 
     public static int minBroadcastConnections = 3;   //0 for default; we need more peers.

@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.WalletExtension;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.WalletExtension;
 
 import java.util.Arrays;
 

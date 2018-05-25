@@ -1,12 +1,12 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.TestNet2Params;
-import org.phorej.store.BlockStore;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.Wallet;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.TestNet2Params;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.Wallet;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 

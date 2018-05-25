@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.io.ByteStreams;
 import com.google.common.primitives.*;

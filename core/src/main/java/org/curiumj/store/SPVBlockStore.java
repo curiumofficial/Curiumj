@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.store;
+package org.curiumj.store;
 
-import org.phorej.core.*;
-import org.phorej.utils.*;
+import org.curiumj.core.*;
+import org.curiumj.utils.*;
 import org.slf4j.*;
 
 import javax.annotation.*;

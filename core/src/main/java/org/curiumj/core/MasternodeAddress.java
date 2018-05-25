@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.net.InetAddresses;
-import org.phorej.params.MainNetParams;
+import org.curiumj.params.MainNetParams;
 
 import java.io.IOException;
 import java.io.OutputStream;

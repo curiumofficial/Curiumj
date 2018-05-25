@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.net.AbstractTimeoutHandler;
-import org.phorej.net.MessageWriteTarget;
-import org.phorej.net.StreamConnection;
-import org.phorej.utils.Threading;
+import org.curiumj.net.AbstractTimeoutHandler;
+import org.curiumj.net.MessageWriteTarget;
+import org.curiumj.net.StreamConnection;
+import org.curiumj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +37,7 @@ import static com.google.common.base.Preconditions.*;
 
 /**
  * Handles high-level message (de)serialization for peers, acting as the bridge between the
- * {@link org.phorej.net} classes and {@link Peer}.
+ * {@link org.curiumj.net} classes and {@link Peer}.
  */
 public abstract class PeerSocketHandler extends AbstractTimeoutHandler implements StreamConnection {
     private static final Logger log = LoggerFactory.getLogger(PeerSocketHandler.class);
@@ -210,8 +210,8 @@ public abstract class PeerSocketHandler extends AbstractTimeoutHandler implement
 
     /**
      * Sets the {@link MessageWriteTarget} used to write messages to the peer. This should almost never be called, it is
-     * called automatically by {@link org.phorej.net.NioClient} or
-     * {@link org.phorej.net.NioClientManager} once the socket finishes initialization.
+     * called automatically by {@link org.curiumj.net.NioClient} or
+     * {@link org.curiumj.net.NioClientManager} once the socket finishes initialization.
      */
     @Override
     public void setWriteTarget(MessageWriteTarget writeTarget) {

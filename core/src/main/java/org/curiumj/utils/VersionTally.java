@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.phorej.utils;
+package org.curiumj.utils;
 
 import java.util.Stack;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.StoredBlock;
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.StoredBlock;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
 
 /**
  * Caching counter for the block versions within a moving window. This class
  * is NOT thread safe (as if two threads are trying to use it concurrently,
  * there's risk of getting versions out of sequence).
  *
- * @see org.phorej.core.NetworkParameters#getMajorityWindow()
- * @see org.phorej.core.NetworkParameters#getMajorityEnforceBlockUpgrade()
- * @see org.phorej.core.NetworkParameters#getMajorityRejectBlockOutdated()
+ * @see org.curiumj.core.NetworkParameters#getMajorityWindow()
+ * @see org.curiumj.core.NetworkParameters#getMajorityEnforceBlockUpgrade()
+ * @see org.curiumj.core.NetworkParameters#getMajorityRejectBlockOutdated()
  */
 public class VersionTally {
     /**

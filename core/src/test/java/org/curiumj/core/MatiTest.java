@@ -1,24 +1,24 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.base.Charsets;
-import org.phorej.core.listeners.*;
-import org.phorej.crypto.DeterministicKey;
-import org.phorej.crypto.LazyECPoint;
-import org.phorej.crypto.MnemonicCode;
-import org.phorej.crypto.MnemonicException;
-import org.phorej.net.discovery.PeerDiscovery;
-import org.phorej.net.discovery.PeerDiscoveryException;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.TestNet3Params;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.script.ScriptChunk;
-import org.phorej.script.ScriptOpCodes;
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
-import org.phorej.store.LevelDBBlockStore;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.*;
+import org.curiumj.core.listeners.*;
+import org.curiumj.crypto.DeterministicKey;
+import org.curiumj.crypto.LazyECPoint;
+import org.curiumj.crypto.MnemonicCode;
+import org.curiumj.crypto.MnemonicException;
+import org.curiumj.net.discovery.PeerDiscovery;
+import org.curiumj.net.discovery.PeerDiscoveryException;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.script.ScriptChunk;
+import org.curiumj.script.ScriptOpCodes;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
+import org.curiumj.store.LevelDBBlockStore;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.*;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.event.Level;
@@ -98,7 +98,7 @@ public class MatiTest {
         Wallet wallet = Wallet.fromSeed(
                 networkParameters,
                 seed,
-                DeterministicKeyChain.KeyChainType.BIP44_PHORE_ONLY
+                DeterministicKeyChain.KeyChainType.BIP44_CURIUM_ONLY
         );
 
         System.out.println("Wallet version: "+wallet.getVersion());
@@ -251,7 +251,7 @@ public class MatiTest {
         Wallet wallet = Wallet.fromSeed(
                 networkParameters,
                 seed,
-                DeterministicKeyChain.KeyChainType.BIP44_PHORE_ONLY
+                DeterministicKeyChain.KeyChainType.BIP44_CURIUM_ONLY
         );
 
         DeterministicKey xpubKey = wallet.getWatchingKey();
@@ -261,7 +261,7 @@ public class MatiTest {
         System.out.println("chaincode: "+ Hex.toHexString(xpubKey.getChainCode()));
         System.out.println("first address: "+wallet.freshReceiveAddress().toBase58());
 
-        Wallet watchingWallet = Wallet.fromWatchingKeyB58(networkParameters,xpub,0, DeterministicKeyChain.KeyChainType.BIP44_PHORE_ONLY);
+        Wallet watchingWallet = Wallet.fromWatchingKeyB58(networkParameters,xpub,0, DeterministicKeyChain.KeyChainType.BIP44_CURIUM_ONLY);
         DeterministicKey xpubKey2 = watchingWallet.getWatchingKey();
         System.out.println("Watching key:  "+xpubKey2.serializePubB58(networkParameters));
         System.out.println("key path: "+xpubKey2.getPathAsString());

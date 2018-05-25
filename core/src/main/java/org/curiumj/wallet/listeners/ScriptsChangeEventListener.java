@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet.listeners;
+package org.curiumj.wallet.listeners;
 
-import org.phorej.script.Script;
-import org.phorej.wallet.Wallet;
+import org.curiumj.script.Script;
+import org.curiumj.wallet.Wallet;
 
 import java.util.List;
 

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
-import org.phorej.signers.TransactionSigner;
-import org.phorej.wallet.KeyBag;
+import org.curiumj.signers.TransactionSigner;
+import org.curiumj.wallet.KeyBag;
 
 public class NopTransactionSigner implements TransactionSigner {
     private boolean isReady;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
 import com.google.common.collect.*;
-import org.phorej.core.*;
+import org.curiumj.core.*;
 import org.spongycastle.math.ec.*;
 
 import java.math.*;

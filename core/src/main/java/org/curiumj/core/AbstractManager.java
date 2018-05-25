@@ -1,4 +1,4 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 
 import static com.google.common.base.Preconditions.checkState;

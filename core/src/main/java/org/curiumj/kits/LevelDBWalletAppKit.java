@@ -1,10 +1,10 @@
-package org.phorej.kits;
+package org.curiumj.kits;
 
-import org.phorej.core.NetworkParameters;
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
-import org.phorej.store.LevelDBBlockStore;
-import org.phorej.store.SPVBlockStore;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
+import org.curiumj.store.LevelDBBlockStore;
+import org.curiumj.store.SPVBlockStore;
 
 import java.io.File;
 

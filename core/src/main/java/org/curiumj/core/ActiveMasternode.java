@@ -1,6 +1,6 @@
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.utils.Threading;
+import org.curiumj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.payments;
+package org.curiumj.protocols.payments;
 
-import org.phorej.core.*;
-import org.phorej.crypto.X509Utils;
-import org.phorej.params.TestNet3Params;
-import org.phorej.params.UnitTestParams;
-import org.phorej.protocols.payments.PaymentProtocol.Output;
-import org.phorej.protocols.payments.PaymentProtocol.PkiVerificationData;
-import org.phorej.protocols.payments.PaymentProtocolException.PkiVerificationException;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.testing.FakeTxBuilder;
+import org.curiumj.core.*;
+import org.curiumj.crypto.X509Utils;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.protocols.payments.PaymentProtocol.Output;
+import org.curiumj.protocols.payments.PaymentProtocol.PkiVerificationData;
+import org.curiumj.protocols.payments.PaymentProtocolException.PkiVerificationException;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.testing.FakeTxBuilder;
 import org.bitcoin.protocols.payments.Protos;
 import org.bitcoin.protocols.payments.Protos.Payment;
 import org.bitcoin.protocols.payments.Protos.PaymentACK;

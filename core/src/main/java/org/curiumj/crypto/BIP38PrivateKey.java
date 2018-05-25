@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 import com.google.common.base.Charsets;
 import com.google.common.base.Objects;
 import com.google.common.primitives.Bytes;

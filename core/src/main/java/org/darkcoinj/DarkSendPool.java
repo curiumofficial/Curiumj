@@ -1,9 +1,9 @@
 package org.darkcoinj;
 
-import org.phorej.core.*;
-import org.phorej.script.Script;
-import org.phorej.utils.ContextPropagatingThreadFactory;
-import org.phorej.utils.Threading;
+import org.curiumj.core.*;
+import org.curiumj.script.Script;
+import org.curiumj.utils.ContextPropagatingThreadFactory;
+import org.curiumj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

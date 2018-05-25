@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.listeners.PeerConnectedEventListener;
-import org.phorej.core.listeners.PeerDisconnectedEventListener;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.Peer;
-import org.phorej.core.PeerAddress;
-import org.phorej.core.VersionMessage;
-import org.phorej.net.discovery.DnsDiscovery;
-import org.phorej.net.discovery.PeerDiscoveryException;
-import org.phorej.net.NioClientManager;
-import org.phorej.params.MainNetParams;
-import org.phorej.utils.BriefLogFormatter;
+import org.curiumj.core.listeners.PeerConnectedEventListener;
+import org.curiumj.core.listeners.PeerDisconnectedEventListener;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.Peer;
+import org.curiumj.core.PeerAddress;
+import org.curiumj.core.VersionMessage;
+import org.curiumj.net.discovery.DnsDiscovery;
+import org.curiumj.net.discovery.PeerDiscoveryException;
+import org.curiumj.net.NioClientManager;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

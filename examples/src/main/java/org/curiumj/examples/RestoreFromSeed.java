@@ -12,15 +12,15 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.listeners.DownloadProgressTracker;
-import org.phorej.core.*;
-import org.phorej.net.discovery.DnsDiscovery;
-import org.phorej.params.TestNet3Params;
-import org.phorej.store.SPVBlockStore;
-import org.phorej.wallet.DeterministicSeed;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.listeners.DownloadProgressTracker;
+import org.curiumj.core.*;
+import org.curiumj.net.discovery.DnsDiscovery;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.store.SPVBlockStore;
+import org.curiumj.wallet.DeterministicSeed;
+import org.curiumj.wallet.Wallet;
 
 import java.io.File;
 

@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package org.phorej.net.discovery;
+package org.curiumj.net.discovery;
 
-import org.phorej.core.*;
-import org.phorej.utils.*;
+import org.curiumj.core.*;
+import org.curiumj.utils.*;
 
 import java.net.*;
 import java.util.*;

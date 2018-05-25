@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.NetworkParameters;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.RegTestParams;
-import org.phorej.params.TestNet3Params;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.RegTestParams;
+import org.curiumj.params.TestNet3Params;
 
 public enum NetworkEnum {
     MAIN,

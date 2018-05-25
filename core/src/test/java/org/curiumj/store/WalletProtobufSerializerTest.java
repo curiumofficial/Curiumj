@@ -15,30 +15,30 @@
  * limitations under the License.
  */
 
-package org.phorej.store;
+package org.curiumj.store;
 
-import org.phorej.core.*;
-import org.phorej.core.Transaction.Purpose;
-import org.phorej.core.TransactionConfidence.ConfidenceType;
-import org.phorej.crypto.DeterministicKey;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.UnitTestParams;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.testing.FakeTxBuilder;
-import org.phorej.testing.FooWalletExtension;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.utils.Threading;
-import org.phorej.wallet.DeterministicKeyChain;
-import org.phorej.wallet.KeyChain;
+import org.curiumj.core.*;
+import org.curiumj.core.Transaction.Purpose;
+import org.curiumj.core.TransactionConfidence.ConfidenceType;
+import org.curiumj.crypto.DeterministicKey;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.testing.FakeTxBuilder;
+import org.curiumj.testing.FooWalletExtension;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.utils.Threading;
+import org.curiumj.wallet.DeterministicKeyChain;
+import org.curiumj.wallet.KeyChain;
 import com.google.protobuf.ByteString;
 
-import org.phorej.wallet.MarriedKeyChain;
-import org.phorej.wallet.Protos;
-import org.phorej.wallet.UnreadableWalletException;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.WalletExtension;
-import org.phorej.wallet.WalletProtobufSerializer;
-import org.phorej.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.curiumj.wallet.MarriedKeyChain;
+import org.curiumj.wallet.Protos;
+import org.curiumj.wallet.UnreadableWalletException;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.WalletExtension;
+import org.curiumj.wallet.WalletProtobufSerializer;
+import org.curiumj.wallet.listeners.WalletCoinsReceivedEventListener;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -52,8 +52,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import static org.phorej.core.Coin.*;
-import static org.phorej.testing.FakeTxBuilder.createFakeTx;
+import static org.curiumj.core.Coin.*;
+import static org.curiumj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 

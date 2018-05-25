@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 /**
  * A general interface which declares the ability to broadcast transactions. This is implemented
- * by {@link org.phorej.core.PeerGroup}.
+ * by {@link org.curiumj.core.PeerGroup}.
  */
 public interface TransactionBroadcaster {
     /** Broadcast the given transaction on the network */

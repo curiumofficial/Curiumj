@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.phorej.net.discovery;
+package org.curiumj.net.discovery;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.TimeUnit;

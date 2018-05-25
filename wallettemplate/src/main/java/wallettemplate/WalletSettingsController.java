@@ -14,9 +14,9 @@
 
 package wallettemplate;
 
-import org.phorej.core.Utils;
-import org.phorej.crypto.MnemonicCode;
-import org.phorej.wallet.DeterministicSeed;
+import org.curiumj.core.Utils;
+import org.curiumj.crypto.MnemonicCode;
+import org.curiumj.wallet.DeterministicSeed;
 import com.google.common.base.Splitter;
 import com.google.common.util.concurrent.Service;
 import javafx.application.Platform;

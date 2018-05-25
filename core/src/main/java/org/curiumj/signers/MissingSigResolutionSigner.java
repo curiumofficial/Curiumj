@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.phorej.signers;
+package org.curiumj.signers;
 
-import org.phorej.core.ECKey;
-import org.phorej.core.TransactionInput;
-import org.phorej.crypto.TransactionSignature;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptChunk;
-import org.phorej.wallet.KeyBag;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.TransactionInput;
+import org.curiumj.crypto.TransactionSignature;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptChunk;
+import org.curiumj.wallet.KeyBag;
+import org.curiumj.wallet.Wallet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * This transaction signer resolves missing signatures in accordance with the given {@link org.phorej.wallet.Wallet.MissingSigsMode}.
+ * This transaction signer resolves missing signatures in accordance with the given {@link org.curiumj.wallet.Wallet.MissingSigsMode}.
  * If missingSigsMode is USE_OP_ZERO this signer does nothing assuming missing signatures are already presented in
  * scriptSigs as OP_0.
  * In MissingSigsMode.THROW mode this signer will throw an exception. It would be MissingSignatureException

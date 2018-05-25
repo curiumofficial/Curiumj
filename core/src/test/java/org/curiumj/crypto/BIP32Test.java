@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
-import org.phorej.core.Base58;
+import org.curiumj.core.Base58;
 import com.google.common.base.Functions;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
-import org.phorej.core.NetworkParameters;
-import org.phorej.params.MainNetParams;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.params.MainNetParams;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-import static org.phorej.core.Utils.HEX;
+import static org.curiumj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 
 /**

@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
-import org.phorej.core.Utils;
-import org.phorej.utils.BriefLogFormatter;
+import org.curiumj.core.Utils;
+import org.curiumj.utils.BriefLogFormatter;
 import com.google.protobuf.ByteString;
 
-import org.phorej.wallet.Protos;
-import org.phorej.wallet.Protos.ScryptParameters;
+import org.curiumj.wallet.Protos;
+import org.curiumj.wallet.Protos.ScryptParameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;

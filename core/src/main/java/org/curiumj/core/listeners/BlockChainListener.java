@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
 /**
  * Old interface for backwards compatibility. Implement the more specific interfaces instead.

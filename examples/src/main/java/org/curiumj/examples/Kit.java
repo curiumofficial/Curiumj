@@ -12,22 +12,22 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.*;
-import org.phorej.kits.WalletAppKit;
-import org.phorej.params.TestNet3Params;
-import org.phorej.script.Script;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.listeners.KeyChainEventListener;
-import org.phorej.wallet.listeners.ScriptsChangeEventListener;
-import org.phorej.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.phorej.wallet.listeners.WalletCoinsSentEventListener;
+import org.curiumj.core.*;
+import org.curiumj.kits.WalletAppKit;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.script.Script;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.listeners.KeyChainEventListener;
+import org.curiumj.wallet.listeners.ScriptsChangeEventListener;
+import org.curiumj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.curiumj.wallet.listeners.WalletCoinsSentEventListener;
 
 import java.io.File;
 import java.util.List;
 
-import org.phorej.core.listeners.TransactionConfidenceEventListener;
+import org.curiumj.core.listeners.TransactionConfidenceEventListener;
 
 /**
  * The following example shows how to use the by pivxj provided WalletAppKit.

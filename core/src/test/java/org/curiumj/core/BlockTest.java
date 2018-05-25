@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.io.ByteStreams;
 
-import org.phorej.core.AbstractBlockChain.NewBlockType;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.TestNet2Params;
-import org.phorej.params.TestNet3Params;
-import org.phorej.params.UnitTestParams;
-import org.phorej.script.ScriptOpCodes;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.Wallet.BalanceType;
+import org.curiumj.core.AbstractBlockChain.NewBlockType;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.TestNet2Params;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.script.ScriptOpCodes;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.Wallet.BalanceType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,7 +35,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
-import static org.phorej.core.Utils.HEX;
+import static org.curiumj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class BlockTest {

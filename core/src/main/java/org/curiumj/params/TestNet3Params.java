@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.phorej.params;
+package org.curiumj.params;
 
-import org.phorej.core.CoinDefinition;
+import org.curiumj.core.CoinDefinition;
 
 import java.math.BigInteger;
 import java.util.Date;
 
-import org.phorej.core.Block;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.StoredBlock;
-import org.phorej.core.VerificationException;
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
+import org.curiumj.core.Block;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.StoredBlock;
+import org.curiumj.core.VerificationException;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
 
 import static com.google.common.base.Preconditions.checkState;
 

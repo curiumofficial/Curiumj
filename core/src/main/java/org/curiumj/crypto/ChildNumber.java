@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
 import java.util.Locale;
 

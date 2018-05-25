@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.channels;
+package org.curiumj.protocols.channels;
 
-import org.phorej.core.Coin;
+import org.curiumj.core.Coin;
 import com.google.protobuf.ByteString;
 
 import javax.annotation.Nullable;

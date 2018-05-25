@@ -1,7 +1,7 @@
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
 import org.darkcoinj.DarkSendSigner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

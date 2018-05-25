@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.*;
-import org.phorej.core.TransactionConfidence.ConfidenceType;
-import org.phorej.crypto.KeyCrypter;
-import org.phorej.crypto.KeyCrypterScrypt;
-import org.phorej.script.Script;
-import org.phorej.signers.LocalTransactionSigner;
-import org.phorej.signers.TransactionSigner;
-import org.phorej.utils.ExchangeRate;
-import org.phorej.utils.Fiat;
-import org.phorej.wallet.Protos.Wallet.EncryptionType;
+import org.curiumj.core.*;
+import org.curiumj.core.TransactionConfidence.ConfidenceType;
+import org.curiumj.crypto.KeyCrypter;
+import org.curiumj.crypto.KeyCrypterScrypt;
+import org.curiumj.script.Script;
+import org.curiumj.signers.LocalTransactionSigner;
+import org.curiumj.signers.TransactionSigner;
+import org.curiumj.utils.ExchangeRate;
+import org.curiumj.utils.Fiat;
+import org.curiumj.wallet.Protos.Wallet.EncryptionType;
 
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
@@ -679,7 +679,7 @@ public class WalletProtobufSerializer {
     }
 
     private WalletTransaction connectTransactionOutputs(final NetworkParameters params,
-                                                        final org.phorej.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
+                                                        final org.curiumj.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
         Transaction tx = txMap.get(txProto.getHash());
         final WalletTransaction.Pool pool;
         switch (txProto.getPool()) {

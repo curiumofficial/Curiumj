@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.store;
+package org.curiumj.store;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -28,19 +28,19 @@ import java.util.concurrent.TimeUnit;
 import java.io.*;
 import java.nio.ByteBuffer;
 
-import org.phorej.core.Address;
-import org.phorej.core.AddressFormatException;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.ScriptException;
-import org.phorej.core.Sha256Hash;
-import org.phorej.core.StoredBlock;
-import org.phorej.core.StoredUndoableBlock;
-import org.phorej.core.Transaction;
-import org.phorej.core.TransactionOutputChanges;
-import org.phorej.core.UTXO;
-import org.phorej.core.UTXOProviderException;
-import org.phorej.core.VerificationException;
-import org.phorej.script.Script;
+import org.curiumj.core.Address;
+import org.curiumj.core.AddressFormatException;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.ScriptException;
+import org.curiumj.core.Sha256Hash;
+import org.curiumj.core.StoredBlock;
+import org.curiumj.core.StoredUndoableBlock;
+import org.curiumj.core.Transaction;
+import org.curiumj.core.TransactionOutputChanges;
+import org.curiumj.core.UTXO;
+import org.curiumj.core.UTXOProviderException;
+import org.curiumj.core.VerificationException;
+import org.curiumj.script.Script;
 import org.iq80.leveldb.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

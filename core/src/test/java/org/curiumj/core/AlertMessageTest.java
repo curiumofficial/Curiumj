@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.params.UnitTestParams;
+import org.curiumj.params.UnitTestParams;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.phorej.core.Utils.HEX;
+import static org.curiumj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

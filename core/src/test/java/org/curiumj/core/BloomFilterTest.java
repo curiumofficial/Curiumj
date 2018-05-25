@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.params.MainNetParams;
-import org.phorej.wallet.KeyChainGroup;
-import org.phorej.wallet.Wallet;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.wallet.KeyChainGroup;
+import org.curiumj.wallet.Wallet;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.phorej.core.Utils.HEX;
+import static org.curiumj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class BloomFilterTest {

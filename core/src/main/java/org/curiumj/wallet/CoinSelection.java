@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.Coin;
-import org.phorej.core.TransactionOutput;
+import org.curiumj.core.Coin;
+import org.curiumj.core.TransactionOutput;
 
 import java.util.Collection;
 

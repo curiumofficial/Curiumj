@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet.listeners;
+package org.curiumj.wallet.listeners;
 
-import org.phorej.core.Coin;
-import org.phorej.core.ECKey;
-import org.phorej.core.Transaction;
-import org.phorej.script.Script;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.Coin;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.Transaction;
+import org.curiumj.script.Script;
+import org.curiumj.wallet.Wallet;
 
 import java.util.List;
 

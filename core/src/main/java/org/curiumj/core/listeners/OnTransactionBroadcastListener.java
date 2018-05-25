@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 
 /**
  * Called when a new transaction is broadcast over the network.

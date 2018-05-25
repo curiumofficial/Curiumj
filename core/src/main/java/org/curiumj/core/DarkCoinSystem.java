@@ -1,6 +1,6 @@
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.store.BlockStore;
+import org.curiumj.store.BlockStore;
 import org.darkcoinj.DarkSend;
 import org.darkcoinj.InstantSend;
 

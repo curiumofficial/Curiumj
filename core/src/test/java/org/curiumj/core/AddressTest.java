@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.params.MainNetParams;
-import org.phorej.params.Networks;
-import org.phorej.params.TestNet3Params;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.Networks;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -31,7 +31,7 @@ import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.phorej.core.Utils.HEX;
+import static org.curiumj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class AddressTest {

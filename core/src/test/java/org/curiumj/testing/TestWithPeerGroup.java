@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
 import com.google.common.base.*;
 import com.google.common.util.concurrent.*;
-import org.phorej.core.*;
-import org.phorej.net.*;
-import org.phorej.store.*;
-import org.phorej.utils.*;
+import org.curiumj.core.*;
+import org.curiumj.net.*;
+import org.curiumj.store.*;
+import org.curiumj.utils.*;
 
 import java.net.*;
 import java.util.concurrent.*;
@@ -86,7 +86,7 @@ public class TestWithPeerGroup extends TestWithNetworkConnections {
     }
 
     protected boolean blockJobs = false;
-    protected final Semaphore jobBlocks = new Semaphore(0);
+    protected final Semacurium jobBlocks = new Semacurium(0);
 
     private PeerGroup createPeerGroup(final ClientConnectionManager manager) {
         return new PeerGroup(PARAMS, blockChain, manager) {

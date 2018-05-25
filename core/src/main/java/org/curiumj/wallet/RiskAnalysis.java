@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.Transaction;
+import org.curiumj.core.Transaction;
 
 import java.util.List;
 

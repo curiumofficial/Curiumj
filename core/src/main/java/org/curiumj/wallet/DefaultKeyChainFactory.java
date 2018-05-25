@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.crypto.*;
+import org.curiumj.crypto.*;
 
 /**
  * Default factory for creating keychains while de-serializing.

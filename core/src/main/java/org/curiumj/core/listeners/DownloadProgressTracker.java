@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.Block;
-import org.phorej.core.FilteredBlock;
-import org.phorej.core.Peer;
-import org.phorej.core.Utils;
+import org.curiumj.core.Block;
+import org.curiumj.core.FilteredBlock;
+import org.curiumj.core.Peer;
+import org.curiumj.core.Utils;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import org.slf4j.Logger;

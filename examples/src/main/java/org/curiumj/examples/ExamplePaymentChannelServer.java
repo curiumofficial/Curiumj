@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
-import org.phorej.core.Coin;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.Sha256Hash;
-import org.phorej.core.VerificationException;
-import org.phorej.kits.WalletAppKit;
-import org.phorej.params.RegTestParams;
-import org.phorej.protocols.channels.*;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.WalletExtension;
+import org.curiumj.core.Coin;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.Sha256Hash;
+import org.curiumj.core.VerificationException;
+import org.curiumj.kits.WalletAppKit;
+import org.curiumj.params.RegTestParams;
+import org.curiumj.protocols.channels.*;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.WalletExtension;
 
 import com.google.common.collect.ImmutableList;
 

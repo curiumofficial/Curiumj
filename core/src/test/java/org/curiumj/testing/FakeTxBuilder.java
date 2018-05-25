@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.phorej.testing;
+package org.curiumj.testing;
 
-import org.phorej.core.*;
-import org.phorej.crypto.TransactionSignature;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
+import org.curiumj.core.*;
+import org.curiumj.crypto.TransactionSignature;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Random;
 
-import static org.phorej.core.Coin.*;
+import static org.curiumj.core.Coin.*;
 import static com.google.common.base.Preconditions.checkState;
 
 public class FakeTxBuilder {

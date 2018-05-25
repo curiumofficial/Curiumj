@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
 import com.google.common.base.Objects;
 
 import java.math.BigInteger;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet.listeners;
+package org.curiumj.wallet.listeners;
 
-import org.phorej.wallet.Wallet;
+import org.curiumj.wallet.Wallet;
 
 /**
  * <p>Implementors are called when the contents of the wallet changes, for instance due to receiving/sending money

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.protocols.channels;
+package org.curiumj.protocols.channels;
 
-import org.phorej.wallet.SendRequest;
-import org.phorej.wallet.Wallet;
+import org.curiumj.wallet.SendRequest;
+import org.curiumj.wallet.Wallet;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
@@ -25,9 +25,9 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import org.phorej.core.*;
-import org.phorej.crypto.TransactionSignature;
-import org.phorej.script.Script;
+import org.curiumj.core.*;
+import org.curiumj.crypto.TransactionSignature;
+import org.curiumj.script.Script;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,4 +1,4 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 /**
  * Created by Hash Engineering on 5/14/2016.

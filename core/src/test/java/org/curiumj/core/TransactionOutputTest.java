@@ -12,14 +12,14 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import com.google.common.collect.ImmutableList;
-import org.phorej.params.MainNetParams;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.testing.TestWithWallet;
-import org.phorej.wallet.SendRequest;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.testing.TestWithWallet;
+import org.curiumj.wallet.SendRequest;
 import org.hamcrest.CoreMatchers;
 import org.junit.After;
 import org.junit.Before;

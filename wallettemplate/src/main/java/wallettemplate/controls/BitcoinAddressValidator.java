@@ -14,9 +14,9 @@
 
 package wallettemplate.controls;
 
-import org.phorej.core.Address;
-import org.phorej.core.AddressFormatException;
-import org.phorej.core.NetworkParameters;
+import org.curiumj.core.Address;
+import org.curiumj.core.AddressFormatException;
+import org.curiumj.core.NetworkParameters;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import wallettemplate.utils.TextFieldValidator;

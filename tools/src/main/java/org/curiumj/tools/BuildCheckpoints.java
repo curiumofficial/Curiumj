@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.phorej.tools;
+package org.curiumj.tools;
 
-import org.phorej.core.listeners.NewBestBlockListener;
-import org.phorej.core.*;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.RegTestParams;
-import org.phorej.params.TestNet3Params;
-import org.phorej.store.BlockStore;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.utils.Threading;
+import org.curiumj.core.listeners.NewBestBlockListener;
+import org.curiumj.core.*;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.RegTestParams;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.utils.Threading;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import joptsimple.OptionParser;

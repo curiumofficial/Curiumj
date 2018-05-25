@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.phorej.uri;
+package org.curiumj.uri;
 
-import org.phorej.core.Address;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.TestNet3Params;
+import org.curiumj.core.Address;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.TestNet3Params;
 import com.google.common.collect.ImmutableList;
 import org.junit.Test;
-import org.phorej.core.CoinDefinition;
+import org.curiumj.core.CoinDefinition;
 
-import static org.phorej.core.Coin.*;
-import org.phorej.core.NetworkParameters;
+import static org.curiumj.core.Coin.*;
+import org.curiumj.core.NetworkParameters;
 import static org.junit.Assert.*;
 
-public class PhoreURITest {
-    private PhoreURI testObject = null;
+public class CuriumURITest {
+    private CuriumURI testObject = null;
 
     private static final NetworkParameters MAINNET = MainNetParams.get();
     private static final String MAINNET_GOOD_ADDRESS = CoinDefinition.UNITTEST_ADDRESS;
@@ -39,36 +39,36 @@ public class PhoreURITest {
         Address goodAddress = Address.fromBase58(MAINNET, MAINNET_GOOD_ADDRESS);
 
         // simple example
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", "AMessage"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", "AMessage"));
 
         // example with spaces, ampersand and plus
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello%20World&message=Mess%20%26%20age%20%2B%20hope", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello World", "Mess & age + hope"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello%20World&message=Mess%20%26%20age%20%2B%20hope", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello World", "Mess & age + hope"));
 
         // no amount, label present, message present
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello&message=glory", PhoreURI.convertToBitcoinURI(goodAddress, null, "Hello", "glory"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello&message=glory", CuriumURI.convertToBitcoinURI(goodAddress, null, "Hello", "glory"));
 
         // amount present, no label, message present
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), null, "glory"));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), "", "glory"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), null, "glory"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), "", "glory"));
 
         // amount present, label present, no message
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", null));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", ""));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", null));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", ""));
 
         // amount present, no label, no message
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), null, null));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", PhoreURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), "", ""));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), null, null));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", CuriumURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), "", ""));
 
         // no amount, label present, no message
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello", PhoreURI.convertToBitcoinURI(goodAddress, null, "Hello", null));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello", CuriumURI.convertToBitcoinURI(goodAddress, null, "Hello", null));
 
         // no amount, no label, message present
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", PhoreURI.convertToBitcoinURI(goodAddress, null, null, "Agatha"));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", PhoreURI.convertToBitcoinURI(goodAddress, null, "", "Agatha"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", CuriumURI.convertToBitcoinURI(goodAddress, null, null, "Agatha"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", CuriumURI.convertToBitcoinURI(goodAddress, null, "", "Agatha"));
 
         // no amount, no label, no message
-        assertEquals("phore:" + MAINNET_GOOD_ADDRESS, PhoreURI.convertToBitcoinURI(goodAddress, null, null, null));
-        assertEquals("phore:" + MAINNET_GOOD_ADDRESS, PhoreURI.convertToBitcoinURI(goodAddress, null, "", ""));
+        assertEquals("curium:" + MAINNET_GOOD_ADDRESS, CuriumURI.convertToBitcoinURI(goodAddress, null, null, null));
+        assertEquals("curium:" + MAINNET_GOOD_ADDRESS, CuriumURI.convertToBitcoinURI(goodAddress, null, "", ""));
 
         // different scheme
         final NetworkParameters alternativeParameters = new MainNetParams() {
@@ -79,12 +79,12 @@ public class PhoreURITest {
         };
 
         assertEquals("test:" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage",
-             PhoreURI.convertToBitcoinURI(Address.fromBase58(alternativeParameters, MAINNET_GOOD_ADDRESS), parseCoin("12.34"), "Hello", "AMessage"));
+             CuriumURI.convertToBitcoinURI(Address.fromBase58(alternativeParameters, MAINNET_GOOD_ADDRESS), parseCoin("12.34"), "Hello", "AMessage"));
     }
 
     @Test
     public void testGood_Simple() throws BitcoinURIParseException {
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
         assertNotNull(testObject);
         assertNull("Unexpected amount", testObject.getAmount());
         assertNull("Unexpected label", testObject.getLabel());
@@ -97,7 +97,7 @@ public class PhoreURITest {
     @Test
     public void testBad_Scheme() {
         try {
-            testObject = new PhoreURI(MAINNET, "blimpcoin:" + MAINNET_GOOD_ADDRESS);
+            testObject = new CuriumURI(MAINNET, "blimpcoin:" + MAINNET_GOOD_ADDRESS);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
         }
@@ -110,14 +110,14 @@ public class PhoreURITest {
     public void testBad_BadSyntax() {
         // Various illegal characters
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + "|" + MAINNET_GOOD_ADDRESS);
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + "|" + MAINNET_GOOD_ADDRESS);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
         }
 
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "\\");
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "\\");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
@@ -125,7 +125,7 @@ public class PhoreURITest {
 
         // Separator without field
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":");
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
@@ -138,7 +138,7 @@ public class PhoreURITest {
     @Test
     public void testBad_Address() {
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME);
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
         }
@@ -150,7 +150,7 @@ public class PhoreURITest {
     @Test
     public void testBad_IncorrectAddressType() {
         try {
-            testObject = new PhoreURI(TestNet3Params.get(), BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
+            testObject = new CuriumURI(TestNet3Params.get(), BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad address"));
@@ -166,17 +166,17 @@ public class PhoreURITest {
     @Test
     public void testGood_Amount() throws BitcoinURIParseException {
         // Test the decimal parsing
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210.12345678");
         assertEquals("654321012345678", testObject.getAmount().toString());
 
         // Test the decimal parsing
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=.12345678");
         assertEquals("12345678", testObject.getAmount().toString());
 
         // Test the integer parsing
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210");
         assertEquals("654321000000000", testObject.getAmount().toString());
     }
@@ -189,7 +189,7 @@ public class PhoreURITest {
      */
     @Test
     public void testGood_Label() throws BitcoinURIParseException {
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?label=Hello%20World");
         assertEquals("Hello World", testObject.getLabel());
     }
@@ -203,8 +203,8 @@ public class PhoreURITest {
     @Test
     public void testGood_LabelWithAmpersandAndPlus() throws BitcoinURIParseException {
         String testString = "Hello Earth & Mars + Venus";
-        String encodedLabel = PhoreURI.encodeURLString(testString);
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
+        String encodedLabel = CuriumURI.encodeURLString(testString);
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
                 + encodedLabel);
         assertEquals(testString, testObject.getLabel());
     }
@@ -219,8 +219,8 @@ public class PhoreURITest {
     public void testGood_LabelWithRussian() throws BitcoinURIParseException {
         // Moscow in Russian in Cyrillic
         String moscowString = "\u041c\u043e\u0441\u043a\u0432\u0430";
-        String encodedLabel = PhoreURI.encodeURLString(moscowString);
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
+        String encodedLabel = CuriumURI.encodeURLString(moscowString);
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
                 + encodedLabel);
         assertEquals(moscowString, testObject.getLabel());
     }
@@ -233,7 +233,7 @@ public class PhoreURITest {
      */
     @Test
     public void testGood_Message() throws BitcoinURIParseException {
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?message=Hello%20World");
         assertEquals("Hello World", testObject.getMessage());
     }
@@ -246,10 +246,10 @@ public class PhoreURITest {
      */
     @Test
     public void testGood_Combinations() throws BitcoinURIParseException {
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210&label=Hello%20World&message=Be%20well");
         assertEquals(
-                "PhoreURI['amount'='654321000000000','label'='Hello World','message'='Be well','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']",
+                "CuriumURI['amount'='654321000000000','label'='Hello World','message'='Be well','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']",
                 testObject.toString());
     }
 
@@ -263,7 +263,7 @@ public class PhoreURITest {
     public void testBad_Amount() throws BitcoinURIParseException {
         // Missing
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?amount=");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -272,7 +272,7 @@ public class PhoreURITest {
 
         // Non-decimal (BIP 21)
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?amount=12X4");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -282,13 +282,13 @@ public class PhoreURITest {
 
     @Test
     public void testEmpty_Label() throws BitcoinURIParseException {
-        assertNull(new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        assertNull(new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?label=").getLabel());
     }
 
     @Test
     public void testEmpty_Message() throws BitcoinURIParseException {
-        assertNull(new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        assertNull(new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?message=").getMessage());
     }
 
@@ -301,7 +301,7 @@ public class PhoreURITest {
     @Test
     public void testBad_Duplicated() throws BitcoinURIParseException {
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?address=aardvark");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -311,7 +311,7 @@ public class PhoreURITest {
 
     @Test
     public void testGood_ManyEquals() throws BitcoinURIParseException {
-        assertEquals("aardvark=zebra", new PhoreURI(MAINNET, BITCOIN_SCHEME + ":"
+        assertEquals("aardvark=zebra", new CuriumURI(MAINNET, BITCOIN_SCHEME + ":"
                 + MAINNET_GOOD_ADDRESS + "?label=aardvark=zebra").getLabel());
     }
 
@@ -324,15 +324,15 @@ public class PhoreURITest {
     @Test
     public void testUnknown() throws BitcoinURIParseException {
         // Unknown not required field
-        testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?aardvark=true");
-        assertEquals("PhoreURI['aardvark'='true','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']", testObject.toString());
+        assertEquals("CuriumURI['aardvark'='true','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']", testObject.toString());
 
         assertEquals("true", testObject.getParameterByName("aardvark"));
 
         // Unknown not required field (isolated)
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?aardvark");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -341,7 +341,7 @@ public class PhoreURITest {
 
         // Unknown and required field
         try {
-            testObject = new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?req-aardvark=true");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -353,33 +353,33 @@ public class PhoreURITest {
     public void brokenURIs() throws BitcoinURIParseException {
         // Check we can parse the incorrectly formatted URIs produced by blockchain.info and its iPhone app.
         String str = CoinDefinition.coinURIScheme + "://"+CoinDefinition.UNITTEST_ADDRESS+"?amount=0.01000000";
-        PhoreURI uri = new PhoreURI(str);
+        CuriumURI uri = new CuriumURI(str);
         assertEquals(CoinDefinition.UNITTEST_ADDRESS, uri.getAddress().toString());
         assertEquals(CENT, uri.getAmount());
     }
 
     @Test(expected = BitcoinURIParseException.class)
     public void testBad_AmountTooPrecise() throws BitcoinURIParseException {
-        new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=0.123456789");
     }
 
     @Test(expected = BitcoinURIParseException.class)
     public void testBad_NegativeAmount() throws BitcoinURIParseException {
-        new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=-1");
     }
 
     @Test(expected = BitcoinURIParseException.class)
     public void testBad_TooLargeAmount() throws BitcoinURIParseException {
-        new PhoreURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        new CuriumURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=100000000");
     }
 
     @Test
     public void testPaymentProtocolReq() throws Exception {
         // Non-backwards compatible form ...
-        PhoreURI uri = new PhoreURI(TestNet3Params.get(), CoinDefinition.coinURIScheme + ":?r=https%3A%2F%2Fbitcoincore.org%2F%7Egavin%2Ff.php%3Fh%3Db0f02e7cea67f168e25ec9b9f9d584f9");
+        CuriumURI uri = new CuriumURI(TestNet3Params.get(), CoinDefinition.coinURIScheme + ":?r=https%3A%2F%2Fbitcoincore.org%2F%7Egavin%2Ff.php%3Fh%3Db0f02e7cea67f168e25ec9b9f9d584f9");
         assertEquals("https://bitcoincore.org/~gavin/f.php?h=b0f02e7cea67f168e25ec9b9f9d584f9", uri.getPaymentRequestUrl());
         assertEquals(ImmutableList.of("https://bitcoincore.org/~gavin/f.php?h=b0f02e7cea67f168e25ec9b9f9d584f9"),
                 uri.getPaymentRequestUrls());
@@ -388,7 +388,7 @@ public class PhoreURITest {
 
     @Test
     public void testMultiplePaymentProtocolReq() throws Exception {
-        PhoreURI uri = new PhoreURI(MAINNET,
+        CuriumURI uri = new CuriumURI(MAINNET,
                 "bitcoin:?r=https%3A%2F%2Fbitcoincore.org%2F%7Egavin&r1=bt:112233445566");
         assertEquals(ImmutableList.of("bt:112233445566", "https://bitcoincore.org/~gavin"), uri.getPaymentRequestUrls());
         assertEquals("https://bitcoincore.org/~gavin", uri.getPaymentRequestUrl());
@@ -396,7 +396,7 @@ public class PhoreURITest {
 
     @Test
     public void testNoPaymentProtocolReq() throws Exception {
-        PhoreURI uri = new PhoreURI(MAINNET, "bitcoin:" + MAINNET_GOOD_ADDRESS);
+        CuriumURI uri = new CuriumURI(MAINNET, "bitcoin:" + MAINNET_GOOD_ADDRESS);
         assertNull(uri.getPaymentRequestUrl());
         assertEquals(ImmutableList.of(), uri.getPaymentRequestUrls());
         assertNotNull(uri.getAddress());
@@ -404,7 +404,7 @@ public class PhoreURITest {
 
     @Test
     public void testUnescapedPaymentProtocolReq() throws Exception {
-        PhoreURI uri = new PhoreURI(TestNet3Params.get(),
+        CuriumURI uri = new CuriumURI(TestNet3Params.get(),
                 "bitcoin:?r=https://merchant.com/pay.php?h%3D2a8628fc2fbe");
         assertEquals("https://merchant.com/pay.php?h=2a8628fc2fbe", uri.getPaymentRequestUrl());
         assertEquals(ImmutableList.of("https://merchant.com/pay.php?h=2a8628fc2fbe"), uri.getPaymentRequestUrls());

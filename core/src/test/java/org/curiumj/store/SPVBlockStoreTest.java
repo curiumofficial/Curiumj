@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.phorej.store;
+package org.curiumj.store;
 
-import org.phorej.core.Address;
-import org.phorej.core.ECKey;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.StoredBlock;
-import org.phorej.params.UnitTestParams;
+import org.curiumj.core.Address;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.StoredBlock;
+import org.curiumj.params.UnitTestParams;
 import org.junit.Test;
 
 import java.io.File;

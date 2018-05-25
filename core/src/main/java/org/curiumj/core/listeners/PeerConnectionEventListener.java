@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.Peer;
+import org.curiumj.core.Peer;
 
 /**
  * <p>Implementors can listen to events like peer discovery, connect or disconnects.</p>

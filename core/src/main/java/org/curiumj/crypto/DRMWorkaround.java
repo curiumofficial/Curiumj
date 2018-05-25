@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
-import org.phorej.core.Utils;
+import org.curiumj.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

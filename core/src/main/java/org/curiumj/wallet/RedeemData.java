@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.ECKey;
-import org.phorej.script.Script;
+import org.curiumj.core.ECKey;
+import org.curiumj.script.Script;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import org.phorej.params.Networks;
-import org.phorej.script.Script;
+import org.curiumj.params.Networks;
+import org.curiumj.script.Script;
 
 import javax.annotation.Nullable;
 

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.ECKey;
+import org.curiumj.core.ECKey;
 
 import javax.annotation.Nullable;
 

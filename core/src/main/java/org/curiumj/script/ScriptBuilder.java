@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.phorej.script;
+package org.curiumj.script;
 
 import com.google.common.collect.Lists;
-import org.phorej.core.Address;
-import org.phorej.core.ECKey;
-import org.phorej.core.Utils;
-import org.phorej.crypto.TransactionSignature;
+import org.curiumj.core.Address;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.Utils;
+import org.curiumj.crypto.TransactionSignature;
 
 import javax.annotation.Nullable;
 import java.math.BigInteger;
@@ -32,11 +32,11 @@ import java.util.Stack;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
-import static org.phorej.script.ScriptOpCodes.*;
+import static org.curiumj.script.ScriptOpCodes.*;
 
 /**
  * <p>Tools for the construction of commonly used script types. You don't normally need this as it's hidden behind
- * convenience methods on {@link org.phorej.core.Transaction}, but they are useful when working with the
+ * convenience methods on {@link org.curiumj.core.Transaction}, but they are useful when working with the
  * protocol at a lower level.</p>
  */
 public class ScriptBuilder {

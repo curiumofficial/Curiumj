@@ -21,7 +21,7 @@
  * 
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

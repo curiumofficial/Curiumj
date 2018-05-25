@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.Block;
-import org.phorej.core.FilteredBlock;
-import org.phorej.core.GetDataMessage;
-import org.phorej.core.Message;
-import org.phorej.core.PeerAddress;
-import org.phorej.core.Peer;
-import org.phorej.core.Transaction;
+import org.curiumj.core.Block;
+import org.curiumj.core.FilteredBlock;
+import org.curiumj.core.GetDataMessage;
+import org.curiumj.core.Message;
+import org.curiumj.core.PeerAddress;
+import org.curiumj.core.Peer;
+import org.curiumj.core.Transaction;
 import javax.annotation.*;
 import java.util.List;
 import java.util.Set;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
 /**
  * Exceptions thrown by the MnemonicCode module.

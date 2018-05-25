@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
 import java.net.InetAddress;
-import org.phorej.core.FullPrunedBlockChain;
-import org.phorej.core.PeerGroup;
-import org.phorej.params.MainNetParams;
-import org.phorej.store.FullPrunedBlockStore;
-import org.phorej.store.LevelDBFullPrunedBlockStore;
+import org.curiumj.core.FullPrunedBlockChain;
+import org.curiumj.core.PeerGroup;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.store.FullPrunedBlockStore;
+import org.curiumj.store.LevelDBFullPrunedBlockStore;
 
 public class LevelDB {
     public static void main(String[] args) throws Exception {

@@ -1,4 +1,4 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 import org.darkcoinj.ActiveMasterNode;
 import org.darkcoinj.MasterNodePayments;

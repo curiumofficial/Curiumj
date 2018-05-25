@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
 @SuppressWarnings("serial")
 public class VerificationException extends RuntimeException {

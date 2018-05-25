@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.core.listeners;
+package org.curiumj.core.listeners;
 
-import org.phorej.core.*;
+import org.curiumj.core.*;
 
 import javax.annotation.*;
 import java.util.*;
@@ -33,7 +33,7 @@ public interface GetDataEventListener {
      * items as possible which appear in the {@link GetDataMessage}, or null if you're not interested in responding.</p>
      *
      * <p>Note that this will never be called if registered with any executor other than
-     * {@link org.phorej.utils.Threading#SAME_THREAD}</p>
+     * {@link org.curiumj.utils.Threading#SAME_THREAD}</p>
      */
     @Nullable
     List<Message> getData(Peer peer, GetDataMessage m);

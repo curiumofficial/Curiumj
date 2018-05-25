@@ -1,8 +1,8 @@
-package org.phorej.crypto;
+package org.curiumj.crypto;
 
-import org.phorej.core.Address;
-import org.phorej.params.MainNetParams;
-import org.phorej.wallet.DeterministicKeyChain;
+import org.curiumj.core.Address;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.wallet.DeterministicKeyChain;
 import org.junit.Test;
 
 import java.security.SecureRandom;

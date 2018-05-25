@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.phorej.utils;
+package org.curiumj.utils;
 
-import org.phorej.core.BlockChain;
-import org.phorej.core.Context;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.StoredBlock;
-import org.phorej.params.UnitTestParams;
-import org.phorej.store.BlockStore;
-import org.phorej.store.BlockStoreException;
-import org.phorej.store.MemoryBlockStore;
-import org.phorej.testing.FakeTxBuilder;
+import org.curiumj.core.BlockChain;
+import org.curiumj.core.Context;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.StoredBlock;
+import org.curiumj.params.UnitTestParams;
+import org.curiumj.store.BlockStore;
+import org.curiumj.store.BlockStoreException;
+import org.curiumj.store.MemoryBlockStore;
+import org.curiumj.testing.FakeTxBuilder;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

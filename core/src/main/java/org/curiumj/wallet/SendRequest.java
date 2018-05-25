@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
@@ -24,18 +24,18 @@ import java.math.BigInteger;
 import java.util.Date;
 
 import org.bitcoin.protocols.payments.Protos.PaymentDetails;
-import org.phorej.core.Address;
-import org.phorej.core.Coin;
-import org.phorej.core.Context;
-import org.phorej.core.ECKey;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.Transaction;
-import org.phorej.core.TransactionOutput;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.utils.ExchangeRate;
-import org.phorej.wallet.KeyChain.KeyPurpose;
-import org.phorej.wallet.Wallet.MissingSigsMode;
+import org.curiumj.core.Address;
+import org.curiumj.core.Coin;
+import org.curiumj.core.Context;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.Transaction;
+import org.curiumj.core.TransactionOutput;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.utils.ExchangeRate;
+import org.curiumj.wallet.KeyChain.KeyPurpose;
+import org.curiumj.wallet.Wallet.MissingSigsMode;
 import org.spongycastle.crypto.params.KeyParameter;
 
 import com.google.common.base.MoreObjects;
@@ -65,7 +65,7 @@ public class SendRequest {
 
     /**
      * When emptyWallet is set, all coins selected by the coin selector are sent to the first output in tx
-     * (its value is ignored and set to {@link org.phorej.wallet.Wallet#getBalance()} - the fees required
+     * (its value is ignored and set to {@link org.curiumj.wallet.Wallet#getBalance()} - the fees required
      * for the transaction). Any additional outputs are removed.
      */
     public boolean emptyWallet = false;
@@ -115,7 +115,7 @@ public class SendRequest {
     public KeyParameter aesKey = null;
 
     /**
-     * If not null, the {@link org.phorej.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
+     * If not null, the {@link org.curiumj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
      * responsible for choosing which transaction outputs (coins) in a wallet to use given the desired send value
      * amount.
      */

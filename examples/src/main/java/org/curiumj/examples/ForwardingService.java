@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
-import org.phorej.core.*;
-import org.phorej.crypto.KeyCrypterException;
-import org.phorej.kits.WalletAppKit;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.RegTestParams;
-import org.phorej.params.TestNet3Params;
-import org.phorej.store.FlatDB;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.curiumj.core.*;
+import org.curiumj.crypto.KeyCrypterException;
+import org.curiumj.kits.WalletAppKit;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.RegTestParams;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.store.FlatDB;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

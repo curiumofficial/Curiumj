@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.params;
+package org.curiumj.params;
 
-import org.phorej.core.CoinDefinition;
+import org.curiumj.core.CoinDefinition;
 
 
 import static com.google.common.base.Preconditions.checkState;

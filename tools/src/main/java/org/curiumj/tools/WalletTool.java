@@ -15,25 +15,25 @@
  * limitations under the License.
  */
 
-package org.phorej.tools;
+package org.curiumj.tools;
 
-import org.phorej.core.*;
-import org.phorej.crypto.*;
-import org.phorej.net.discovery.DnsDiscovery;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.RegTestParams;
-import org.phorej.params.TestNet3Params;
-import org.phorej.protocols.payments.PaymentProtocol;
-import org.phorej.protocols.payments.PaymentProtocolException;
-import org.phorej.protocols.payments.PaymentSession;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.store.*;
-import org.phorej.uri.PhoreURI;
-import org.phorej.uri.BitcoinURIParseException;
-import org.phorej.utils.BriefLogFormatter;
-import org.phorej.wallet.DeterministicSeed;
-import org.phorej.wallet.DeterministicUpgradeRequiredException;
-import org.phorej.wallet.DeterministicUpgradeRequiresPassword;
+import org.curiumj.core.*;
+import org.curiumj.crypto.*;
+import org.curiumj.net.discovery.DnsDiscovery;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.RegTestParams;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.protocols.payments.PaymentProtocol;
+import org.curiumj.protocols.payments.PaymentProtocolException;
+import org.curiumj.protocols.payments.PaymentSession;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.store.*;
+import org.curiumj.uri.CuriumURI;
+import org.curiumj.uri.BitcoinURIParseException;
+import org.curiumj.utils.BriefLogFormatter;
+import org.curiumj.wallet.DeterministicSeed;
+import org.curiumj.wallet.DeterministicUpgradeRequiredException;
+import org.curiumj.wallet.DeterministicUpgradeRequiresPassword;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
@@ -47,19 +47,19 @@ import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import joptsimple.util.DateConverter;
 
-import org.phorej.core.listeners.BlocksDownloadedEventListener;
-import org.phorej.core.listeners.DownloadProgressTracker;
-import org.phorej.wallet.MarriedKeyChain;
-import org.phorej.wallet.Protos;
-import org.phorej.wallet.SendRequest;
-import org.phorej.wallet.Wallet;
-import org.phorej.wallet.WalletExtension;
-import org.phorej.wallet.WalletProtobufSerializer;
-import org.phorej.wallet.Wallet.BalanceType;
-import org.phorej.wallet.listeners.WalletChangeEventListener;
-import org.phorej.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.phorej.wallet.listeners.WalletCoinsSentEventListener;
-import org.phorej.wallet.listeners.WalletReorganizeEventListener;
+import org.curiumj.core.listeners.BlocksDownloadedEventListener;
+import org.curiumj.core.listeners.DownloadProgressTracker;
+import org.curiumj.wallet.MarriedKeyChain;
+import org.curiumj.wallet.Protos;
+import org.curiumj.wallet.SendRequest;
+import org.curiumj.wallet.Wallet;
+import org.curiumj.wallet.WalletExtension;
+import org.curiumj.wallet.WalletProtobufSerializer;
+import org.curiumj.wallet.Wallet.BalanceType;
+import org.curiumj.wallet.listeners.WalletChangeEventListener;
+import org.curiumj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.curiumj.wallet.listeners.WalletCoinsSentEventListener;
+import org.curiumj.wallet.listeners.WalletReorganizeEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -83,7 +83,7 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 
-import static org.phorej.core.Coin.parseCoin;
+import static org.curiumj.core.Coin.parseCoin;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
@@ -1000,7 +1000,7 @@ public class WalletTool {
                 if (location.startsWith("http")) {
                     future = PaymentSession.createFromUrl(location, verifyPki);
                 } else {
-                    PhoreURI paymentRequestURI = new PhoreURI(location);
+                    CuriumURI paymentRequestURI = new CuriumURI(location);
                     future = PaymentSession.createFromBitcoinUri(paymentRequestURI, verifyPki);
                 }
                 PaymentSession session = future.get();

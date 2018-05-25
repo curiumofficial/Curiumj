@@ -15,9 +15,9 @@
 package wallettemplate;
 
 import javafx.scene.layout.HBox;
-import org.phorej.core.*;
-import org.phorej.wallet.SendRequest;
-import org.phorej.wallet.Wallet;
+import org.curiumj.core.*;
+import org.curiumj.wallet.SendRequest;
+import org.curiumj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

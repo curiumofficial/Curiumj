@@ -1,11 +1,11 @@
-package org.phorej.core;
+package org.curiumj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-import static org.phorej.core.Utils.int64ToByteStreamLE;
-import static org.phorej.core.Utils.uint32ToByteStreamLE;
+import static org.curiumj.core.Utils.int64ToByteStreamLE;
+import static org.curiumj.core.Utils.uint32ToByteStreamLE;
 
 /**
  * Created by Eric on 2/8/2015.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.examples;
+package org.curiumj.examples;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -24,24 +24,24 @@ import java.util.EnumSet;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import org.phorej.core.Coin;
-import org.phorej.core.ECKey;
-import org.phorej.core.NetworkParameters;
-import org.phorej.core.ScriptException;
-import org.phorej.core.Transaction;
-import org.phorej.core.TransactionInput;
-import org.phorej.core.TransactionOutput;
-import org.phorej.core.Utils;
-import org.phorej.crypto.TransactionSignature;
-import org.phorej.params.MainNetParams;
-import org.phorej.script.Script;
-import org.phorej.script.ScriptBuilder;
-import org.phorej.script.ScriptChunk;
-import static org.phorej.script.ScriptOpCodes.getOpCodeName;
-import org.phorej.signers.LocalTransactionSigner;
-import org.phorej.signers.TransactionSigner.ProposedTransaction;
-import org.phorej.wallet.KeyBag;
-import org.phorej.wallet.RedeemData;
+import org.curiumj.core.Coin;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.NetworkParameters;
+import org.curiumj.core.ScriptException;
+import org.curiumj.core.Transaction;
+import org.curiumj.core.TransactionInput;
+import org.curiumj.core.TransactionOutput;
+import org.curiumj.core.Utils;
+import org.curiumj.crypto.TransactionSignature;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.script.Script;
+import org.curiumj.script.ScriptBuilder;
+import org.curiumj.script.ScriptChunk;
+import static org.curiumj.script.ScriptOpCodes.getOpCodeName;
+import org.curiumj.signers.LocalTransactionSigner;
+import org.curiumj.signers.TransactionSigner.ProposedTransaction;
+import org.curiumj.wallet.KeyBag;
+import org.curiumj.wallet.RedeemData;
 
 /**
  * Test case generator for transactions with low-S and high-S signatures, to

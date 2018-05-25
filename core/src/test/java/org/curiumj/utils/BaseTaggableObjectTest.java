@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.phorej.utils;
+package org.curiumj.utils;
 
 import com.google.protobuf.ByteString;
 import org.junit.Before;

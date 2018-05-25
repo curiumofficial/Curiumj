@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.phorej.core;
+package org.curiumj.core;
 
-import org.phorej.script.*;
+import org.curiumj.script.*;
 import com.google.common.base.Objects;
 
 import java.io.*;

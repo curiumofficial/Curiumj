@@ -12,18 +12,18 @@
  * limitations under the License.
  */
 
-package org.phorej.tools;
+package org.curiumj.tools;
 
-import org.phorej.core.*;
-import org.phorej.params.MainNetParams;
-import org.phorej.params.TestNet3Params;
-import org.phorej.store.*;
-import org.phorej.utils.BlockFileLoader;
+import org.curiumj.core.*;
+import org.curiumj.params.MainNetParams;
+import org.curiumj.params.TestNet3Params;
+import org.curiumj.store.*;
+import org.curiumj.utils.BlockFileLoader;
 import com.google.common.base.Preconditions;
 
 import java.io.File;
 
-/** Very thin wrapper around {@link org.phorej.utils.BlockFileLoader} */
+/** Very thin wrapper around {@link org.curiumj.utils.BlockFileLoader} */
 public class BlockImporter {
     public static void main(String[] args) throws BlockStoreException, VerificationException, PrunedException {
         System.out.println("USAGE: BlockImporter (prod|test) (H2|Disk|MemFull|Mem|SPV) [blockStore]");

@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.phorej.wallet;
+package org.curiumj.wallet;
 
-import org.phorej.core.BloomFilter;
-import org.phorej.core.ECKey;
-import org.phorej.core.Utils;
-import org.phorej.crypto.KeyCrypter;
-import org.phorej.crypto.KeyCrypterException;
-import org.phorej.crypto.KeyCrypterScrypt;
-import org.phorej.utils.Threading;
+import org.curiumj.core.BloomFilter;
+import org.curiumj.core.ECKey;
+import org.curiumj.core.Utils;
+import org.curiumj.crypto.KeyCrypter;
+import org.curiumj.crypto.KeyCrypterException;
+import org.curiumj.crypto.KeyCrypterScrypt;
+import org.curiumj.utils.Threading;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
-import org.phorej.wallet.listeners.AbstractKeyChainEventListener;
+import org.curiumj.wallet.listeners.AbstractKeyChainEventListener;
 import org.junit.Before;
 import org.junit.Test;
 

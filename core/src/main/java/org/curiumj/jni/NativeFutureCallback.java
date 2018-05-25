@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.phorej.jni;
+package org.curiumj.jni;
 
 import com.google.common.util.concurrent.FutureCallback;
 
