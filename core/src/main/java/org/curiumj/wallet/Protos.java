@@ -2715,7 +2715,7 @@ public final class Protos {
        *
        * <pre>
        **
-       * Not really a key, but rather contains the mnemonic phrase for a deterministic key hierarchy in the private_key field.
+       * Not really a key, but rather contains the mnemonic cruase for a deterministic key hierarchy in the private_key field.
        * The label and public_key fields are missing. Creation timestamp will exist.
        * </pre>
        */
@@ -2756,7 +2756,7 @@ public final class Protos {
        *
        * <pre>
        **
-       * Not really a key, but rather contains the mnemonic phrase for a deterministic key hierarchy in the private_key field.
+       * Not really a key, but rather contains the mnemonic cruase for a deterministic key hierarchy in the private_key field.
        * The label and public_key fields are missing. Creation timestamp will exist.
        * </pre>
        */
@@ -14988,7 +14988,7 @@ public final class Protos {
        * <code>ENCRYPTED_SCRYPT_AES = 2;</code>
        *
        * <pre>
-       * All keys are encrypted with a passphrase based KDF of scrypt and AES encryption
+       * All keys are encrypted with a passcruase based KDF of scrypt and AES encryption
        * </pre>
        */
       ENCRYPTED_SCRYPT_AES(1, 2),
@@ -15006,7 +15006,7 @@ public final class Protos {
        * <code>ENCRYPTED_SCRYPT_AES = 2;</code>
        *
        * <pre>
-       * All keys are encrypted with a passphrase based KDF of scrypt and AES encryption
+       * All keys are encrypted with a passcruase based KDF of scrypt and AES encryption
        * </pre>
        */
       public static final int ENCRYPTED_SCRYPT_AES_VALUE = 2;

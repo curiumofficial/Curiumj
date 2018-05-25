@@ -103,9 +103,9 @@ public class MarriedKeyChain extends DeterministicKeyChain {
             if (threshold == 0)
                 threshold = (followingKeys.size() + 1) / 2 + 1;
             if (random != null) {
-                chain = new MarriedKeyChain(random, bits, getPassphrase(), seedCreationTimeSecs);
+                chain = new MarriedKeyChain(random, bits, getPasscruase(), seedCreationTimeSecs);
             } else if (entropy != null) {
-                chain = new MarriedKeyChain(entropy, getPassphrase(), seedCreationTimeSecs);
+                chain = new MarriedKeyChain(entropy, getPasscruase(), seedCreationTimeSecs);
             } else if (seed != null) {
                 seed.setCreationTimeSeconds(seedCreationTimeSecs);
                 chain = new MarriedKeyChain(seed);
@@ -132,12 +132,12 @@ public class MarriedKeyChain extends DeterministicKeyChain {
     }
 
     // Builder constructors
-    private MarriedKeyChain(SecureRandom random, int bits, String passphrase, long seedCreationTimeSecs) {
-        super(random, bits, passphrase, seedCreationTimeSecs);
+    private MarriedKeyChain(SecureRandom random, int bits, String passcruase, long seedCreationTimeSecs) {
+        super(random, bits, passcruase, seedCreationTimeSecs);
     }
 
-    private MarriedKeyChain(byte[] entropy, String passphrase, long seedCreationTimeSecs) {
-        super(entropy, passphrase, seedCreationTimeSecs);
+    private MarriedKeyChain(byte[] entropy, String passcruase, long seedCreationTimeSecs) {
+        super(entropy, passcruase, seedCreationTimeSecs);
     }
 
     private MarriedKeyChain(DeterministicSeed seed) {

@@ -38,7 +38,7 @@ import static com.google.common.base.Preconditions.checkState;
 
 /**
  * Implementation of <a href="https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki">BIP 38</a>
- * passphrase-protected private keys. Currently, only decryption is supported.
+ * passcruase-protected private keys. Currently, only decryption is supported.
  */
 public class BIP38PrivateKey extends VersionedChecksummedBytes {
 
@@ -49,7 +49,7 @@ public class BIP38PrivateKey extends VersionedChecksummedBytes {
     public final byte[] addressHash;
     public final byte[] content;
 
-    public static final class BadPassphraseException extends Exception {
+    public static final class BadPasscruaseException extends Exception {
     }
 
     /**
@@ -104,19 +104,19 @@ public class BIP38PrivateKey extends VersionedChecksummedBytes {
         content = Arrays.copyOfRange(bytes, 6, 38);
     }
 
-    public ECKey decrypt(String passphrase) throws BadPassphraseException {
-        String normalizedPassphrase = Normalizer.normalize(passphrase, Normalizer.Form.NFC);
-        ECKey key = ecMultiply ? decryptEC(normalizedPassphrase) : decryptNoEC(normalizedPassphrase);
+    public ECKey decrypt(String passcruase) throws BadPasscruaseException {
+        String normalizedPasscruase = Normalizer.normalize(passcruase, Normalizer.Form.NFC);
+        ECKey key = ecMultiply ? decryptEC(normalizedPasscruase) : decryptNoEC(normalizedPasscruase);
         Sha256Hash hash = Sha256Hash.twiceOf(key.toAddress(params).toString().getBytes(Charsets.US_ASCII));
         byte[] actualAddressHash = Arrays.copyOfRange(hash.getBytes(), 0, 4);
         if (!Arrays.equals(actualAddressHash, addressHash))
-            throw new BadPassphraseException();
+            throw new BadPasscruaseException();
         return key;
     }
 
-    private ECKey decryptNoEC(String normalizedPassphrase) {
+    private ECKey decryptNoEC(String normalizedPasscruase) {
         try {
-            byte[] derived = SCrypt.scrypt(normalizedPassphrase.getBytes(Charsets.UTF_8), addressHash, 16384, 8, 8, 64);
+            byte[] derived = SCrypt.scrypt(normalizedPasscruase.getBytes(Charsets.UTF_8), addressHash, 16384, 8, 8, 64);
             byte[] key = Arrays.copyOfRange(derived, 32, 64);
             SecretKeySpec keyspec = new SecretKeySpec(key, "AES");
 
@@ -133,12 +133,12 @@ public class BIP38PrivateKey extends VersionedChecksummedBytes {
         }
     }
 
-    private ECKey decryptEC(String normalizedPassphrase) {
+    private ECKey decryptEC(String normalizedPasscruase) {
         try {
             byte[] ownerEntropy = Arrays.copyOfRange(content, 0, 8);
             byte[] ownerSalt = hasLotAndSequence ? Arrays.copyOfRange(ownerEntropy, 0, 4) : ownerEntropy;
 
-            byte[] passFactorBytes = SCrypt.scrypt(normalizedPassphrase.getBytes(Charsets.UTF_8), ownerSalt, 16384, 8, 8, 32);
+            byte[] passFactorBytes = SCrypt.scrypt(normalizedPasscruase.getBytes(Charsets.UTF_8), ownerSalt, 16384, 8, 8, 32);
             if (hasLotAndSequence) {
                 byte[] hashBytes = Bytes.concat(passFactorBytes, ownerEntropy);
                 checkState(hashBytes.length == 40);

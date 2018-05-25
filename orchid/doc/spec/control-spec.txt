@@ -1239,7 +1239,7 @@
        open.
 
        {Controllers may recommend that the user increase the limit, or
-       increase it for them.  Recommendations should be phrased in an
+       increase it for them.  Recommendations should be cruased in an
        OS-appropriate way and automated when possible.}
 
      BUG

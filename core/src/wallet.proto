@@ -90,7 +90,7 @@ message Key {
     ENCRYPTED_SCRYPT_AES = 2;
 
     /**
-    * Not really a key, but rather contains the mnemonic phrase for a deterministic key hierarchy in the private_key field.
+    * Not really a key, but rather contains the mnemonic cruase for a deterministic key hierarchy in the private_key field.
     * The label and public_key fields are missing. Creation timestamp will exist.
     */
     DETERMINISTIC_MNEMONIC = 3;
@@ -356,7 +356,7 @@ message Wallet {
    */
   enum EncryptionType {
     UNENCRYPTED = 1;                 // All keys in the wallet are unencrypted
-    ENCRYPTED_SCRYPT_AES = 2;        // All keys are encrypted with a passphrase based KDF of scrypt and AES encryption
+    ENCRYPTED_SCRYPT_AES = 2;        // All keys are encrypted with a passcruase based KDF of scrypt and AES encryption
   }
 
   required string network_identifier = 1; // the network used by this wallet

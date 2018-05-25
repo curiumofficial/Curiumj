@@ -12,10 +12,10 @@ import java.util.Map;
 public class CoinDefinition {
 
     public static final String coinName = "Curium";
-    public static final String coinTicker = "PHR";
+    public static final String coinTicker = "CRU";
     public static final String coinURIScheme = "curium";
     public static final String cryptsyMarketId = "155";
-    public static final String cryptsyMarketCurrency = "PHR";
+    public static final String cryptsyMarketCurrency = "CRU";
 
     public enum CoinPrecision {
         Coins,
@@ -23,7 +23,7 @@ public class CoinDefinition {
     }
     public static final CoinPrecision coinPrecision = CoinPrecision.Coins;
 
-    public static final String UNSPENT_API_URL = "https://chainz.cryptoid.info/phr/api.dws?q=unspent";
+    public static final String UNSPENT_API_URL = "https://chainz.cryptoid.info/cru/api.dws?q=unspent";
     public enum UnspentAPIType {
         BitEasy,
         Blockr,

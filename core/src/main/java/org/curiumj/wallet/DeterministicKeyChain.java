@@ -98,7 +98,7 @@ import static com.google.common.collect.Lists.newLinkedList;
 @SuppressWarnings("PublicStaticCollectionField")
 public class DeterministicKeyChain implements EncryptableKeyChain {
     private static final Logger log = LoggerFactory.getLogger(DeterministicKeyChain.class);
-    public static final String DEFAULT_PASSPHRASE_FOR_MNEMONIC = "";
+    public static final String DEFAULT_PASSCRUASE_FOR_MNEMONIC = "";
 
     protected final ReentrantLock lock = Threading.lock("DeterministicKeyChain");
 
@@ -178,7 +178,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
     public static class Builder<T extends Builder<T>> {
         protected SecureRandom random;
         protected int bits = 128;
-        protected String passphrase;
+        protected String passcruase;
         protected long seedCreationTimeSecs;
         protected byte[] entropy;
         protected DeterministicSeed seed;
@@ -213,7 +213,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
 
         /**
          * Generates a new key chain with entropy selected randomly from the given {@link java.security.SecureRandom}
-         * object and of the requested size in bits.  The derived seed is further protected with a user selected passphrase
+         * object and of the requested size in bits.  The derived seed is further protected with a user selected passcruase
          * (see BIP 39).
          * @param random the random number generator - use new SecureRandom().
          * @param bits The number of bits of entropy to use when generating entropy.  Either 128 (default), 192 or 256.
@@ -226,7 +226,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
 
         /**
          * Generates a new key chain with 128 bits of entropy selected randomly from the given {@link java.security.SecureRandom}
-         * object.  The derived seed is further protected with a user selected passphrase
+         * object.  The derived seed is further protected with a user selected passcruase
          * (see BIP 39).
          * @param random the random number generator - use new SecureRandom().
          */
@@ -245,23 +245,23 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
             return self();
         }
 
-        /** The passphrase to use with the generated mnemonic, or null if you would like to use the default empty string. Currently must be the empty string. */
-        public T passphrase(String passphrase) {
-            // FIXME support non-empty passphrase
-            this.passphrase = passphrase;
+        /** The passcruase to use with the generated mnemonic, or null if you would like to use the default empty string. Currently must be the empty string. */
+        public T passcruase(String passcruase) {
+            // FIXME support non-empty passcruase
+            this.passcruase = passcruase;
             return self();
         }
 
         public DeterministicKeyChain build() {
             checkState(random != null || entropy != null || seed != null || watchingKey!= null, "Must provide either entropy or random or seed or watchingKey");
-            checkState(passphrase == null || seed == null, "Passphrase must not be specified with seed");
+            checkState(passcruase == null || seed == null, "Passcruase must not be specified with seed");
             DeterministicKeyChain chain;
 
             if (random != null) {
-                // Default passphrase to "" if not specified
-                chain = new DeterministicKeyChain(random, bits, getPassphrase(), seedCreationTimeSecs);
+                // Default passcruase to "" if not specified
+                chain = new DeterministicKeyChain(random, bits, getPasscruase(), seedCreationTimeSecs);
             } else if (entropy != null) {
-                chain = new DeterministicKeyChain(entropy, getPassphrase(), seedCreationTimeSecs);
+                chain = new DeterministicKeyChain(entropy, getPasscruase(), seedCreationTimeSecs);
             } else if (seed != null) {
                 seed.setCreationTimeSeconds(seedCreationTimeSecs);
                 chain = new DeterministicKeyChain(seed);
@@ -273,8 +273,8 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
             return chain;
         }
 
-        protected String getPassphrase() {
-            return passphrase != null ? passphrase : DEFAULT_PASSPHRASE_FOR_MNEMONIC;
+        protected String getPasscruase() {
+            return passcruase != null ? passcruase : DEFAULT_PASSCRUASE_FOR_MNEMONIC;
         }
     }
 
@@ -287,7 +287,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
      * object and the default entropy size.
      */
     public DeterministicKeyChain(SecureRandom random) {
-        this(random, DeterministicSeed.DEFAULT_SEED_ENTROPY_BITS, DEFAULT_PASSPHRASE_FOR_MNEMONIC, Utils.currentTimeSeconds());
+        this(random, DeterministicSeed.DEFAULT_SEED_ENTROPY_BITS, DEFAULT_PASSCRUASE_FOR_MNEMONIC, Utils.currentTimeSeconds());
     }
 
     /**
@@ -295,16 +295,16 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
      * object and of the requested size in bits.
      */
     public DeterministicKeyChain(SecureRandom random, int bits) {
-        this(random, bits, DEFAULT_PASSPHRASE_FOR_MNEMONIC, Utils.currentTimeSeconds());
+        this(random, bits, DEFAULT_PASSCRUASE_FOR_MNEMONIC, Utils.currentTimeSeconds());
     }
 
     /**
      * Generates a new key chain with entropy selected randomly from the given {@link java.security.SecureRandom}
-     * object and of the requested size in bits.  The derived seed is further protected with a user selected passphrase
+     * object and of the requested size in bits.  The derived seed is further protected with a user selected passcruase
      * (see BIP 39).
      */
-    public DeterministicKeyChain(SecureRandom random, int bits, String passphrase, long seedCreationTimeSecs) {
-        this(new DeterministicSeed(random, bits, passphrase, seedCreationTimeSecs));
+    public DeterministicKeyChain(SecureRandom random, int bits, String passcruase, long seedCreationTimeSecs) {
+        this(new DeterministicSeed(random, bits, passcruase, seedCreationTimeSecs));
     }
 
     /**
@@ -312,8 +312,8 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
      * if the starting seed is the same. You should provide the creation time in seconds since the UNIX epoch for the
      * seed: this lets us know from what part of the chain we can expect to see derived keys appear.
      */
-    public DeterministicKeyChain(byte[] entropy, String passphrase, long seedCreationTimeSecs) {
-        this(new DeterministicSeed(entropy, passphrase, seedCreationTimeSecs));
+    public DeterministicKeyChain(byte[] entropy, String passcruase, long seedCreationTimeSecs) {
+        this(new DeterministicSeed(entropy, passcruase, seedCreationTimeSecs));
     }
 
     /**
@@ -892,7 +892,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
                     chain = null;
                 }
                 long timestamp = key.getCreationTimestamp() / 1000;
-                String passphrase = DEFAULT_PASSPHRASE_FOR_MNEMONIC; // FIXME allow non-empty passphrase
+                String passcruase = DEFAULT_PASSCRUASE_FOR_MNEMONIC; // FIXME allow non-empty passcruase
                 if (key.hasSecretBytes()) {
                     if (key.hasEncryptedDeterministicSeed())
                         throw new UnreadableWalletException("Malformed key proto: " + key.toString());
@@ -900,7 +900,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
                     if (key.hasDeterministicSeed()) {
                         seedBytes = key.getDeterministicSeed().toByteArray();
                     }
-                    seed = new DeterministicSeed(key.getSecretBytes().toStringUtf8(), seedBytes, passphrase, timestamp);
+                    seed = new DeterministicSeed(key.getSecretBytes().toStringUtf8(), seedBytes, passcruase, timestamp);
                 } else if (key.hasEncryptedData()) {
                     if (key.hasDeterministicSeed())
                         throw new UnreadableWalletException("Malformed key proto: " + key.toString());
@@ -1065,8 +1065,8 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
         checkState(getKeyCrypter() != null, "Key chain not encrypted");
         checkState(seed != null, "Can't decrypt a watching chain");
         checkState(seed.isEncrypted());
-        String passphrase = DEFAULT_PASSPHRASE_FOR_MNEMONIC; // FIXME allow non-empty passphrase
-        DeterministicSeed decSeed = seed.decrypt(getKeyCrypter(), passphrase, aesKey);
+        String passcruase = DEFAULT_PASSCRUASE_FOR_MNEMONIC; // FIXME allow non-empty passcruase
+        DeterministicSeed decSeed = seed.decrypt(getKeyCrypter(), passcruase, aesKey);
         DeterministicKeyChain chain = makeKeyChainFromSeed(decSeed);
         // Now double check that the keys match to catch the case where the key is wrong but padding didn't catch it.
         if (!chain.getWatchingKey().getPubKeyPoint().equals(getWatchingKey().getPubKeyPoint()))

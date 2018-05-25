@@ -17,7 +17,7 @@
 package org.curiumj.crypto;
 
 import org.curiumj.core.ECKey;
-import org.curiumj.crypto.BIP38PrivateKey.BadPassphraseException;
+import org.curiumj.crypto.BIP38PrivateKey.BadPasscruaseException;
 import org.curiumj.params.MainNetParams;
 import org.curiumj.params.TestNet3Params;
 import org.junit.Test;
@@ -57,13 +57,13 @@ public class BIP38PrivateKeyTest {
     public void bip38testvector_noCompression_noEcMultiply_test3() throws Exception {
         BIP38PrivateKey encryptedKey = BIP38PrivateKey.fromBase58(MAINNET,
                 "6PRW5o9FLp4gJDDVqJQKJFTpMvdsSGJxMYHtHaQBF3ooa8mwD69bapcDQn");
-        StringBuilder passphrase = new StringBuilder();
-        passphrase.appendCodePoint(0x03d2); // GREEK UPSILON WITH HOOK
-        passphrase.appendCodePoint(0x0301); // COMBINING ACUTE ACCENT
-        passphrase.appendCodePoint(0x0000); // NULL
-        passphrase.appendCodePoint(0x010400); // DESERET CAPITAL LETTER LONG I
-        passphrase.appendCodePoint(0x01f4a9); // PILE OF POO
-        ECKey key = encryptedKey.decrypt(passphrase.toString());
+        StringBuilder passcruase = new StringBuilder();
+        passcruase.appendCodePoint(0x03d2); // GREEK UPSILON WITH HOOK
+        passcruase.appendCodePoint(0x0301); // COMBINING ACUTE ACCENT
+        passcruase.appendCodePoint(0x0000); // NULL
+        passcruase.appendCodePoint(0x010400); // DESERET CAPITAL LETTER LONG I
+        passcruase.appendCodePoint(0x01f4a9); // PILE OF POO
+        ECKey key = encryptedKey.decrypt(passcruase.toString());
         assertEquals("5Jajm8eQ22H3pGWLEVCXyvND8dQZhiQhoLJNKjYXk9roUFTMSZ4", key.getPrivateKeyEncoded(MAINNET)
                 .toString());
     }
@@ -142,8 +142,8 @@ public class BIP38PrivateKeyTest {
                 .toString());
     }
 
-    @Test(expected = BadPassphraseException.class)
-    public void badPassphrase() throws Exception {
+    @Test(expected = BadPasscruaseException.class)
+    public void badPasscruase() throws Exception {
         BIP38PrivateKey encryptedKey = BIP38PrivateKey.fromBase58(MAINNET,
                 "6PRVWUbkzzsbcVac2qwfssoUJAN1Xhrg6bNk8J7Nzm5H7kxEbn2Nh2ZoGg");
         encryptedKey.decrypt("BAD");

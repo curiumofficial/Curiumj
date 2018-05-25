@@ -119,22 +119,22 @@ public class MnemonicCode {
     /**
      * Convert mnemonic word list to seed.
      */
-    public static byte[] toSeed(List<String> words, String passphrase) {
+    public static byte[] toSeed(List<String> words, String passcruase) {
         // To create binary seed from mnemonic, we use PBKDF2 function
         // with mnemonic sentence (in UTF-8) used as a password and
-        // string "mnemonic" + passphrase (again in UTF-8) used as a
+        // string "mnemonic" + passcruase (again in UTF-8) used as a
         // salt. Iteration count is set to 4096 and HMAC-SHA512 is
         // used as a pseudo-random function. Desired length of the
         // derived key is 512 bits (= 64 bytes).
         //
         String pass = Utils.join(words);
-        String salt = "mnemonic" + passphrase;
+        String salt = "mnemonic" + passcruase;
 
         final Stopwatch watch = Stopwatch.createStarted();
         byte[] seed = PBKDF2SHA512.derive(pass, salt, PBKDF2_ROUNDS, 64);
         watch.stop();
         log.info("PBKDF2 took {}", watch);
-        System.out.println("MnemonicCode class: "+ Arrays.toString(words.toArray())+", passphrase: "+passphrase+ ", \ntoSeed: "+HEX.encode(seed));
+        System.out.println("MnemonicCode class: "+ Arrays.toString(words.toArray())+", passcruase: "+passcruase+ ", \ntoSeed: "+HEX.encode(seed));
         return seed;
     }
 

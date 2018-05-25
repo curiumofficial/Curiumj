@@ -743,8 +743,8 @@ public class KeyChainGroup implements KeyBag {
         // we all have bigger problems.
         entropy = Arrays.copyOfRange(entropy, 0, DeterministicSeed.DEFAULT_SEED_ENTROPY_BITS / 8);    // final argument is exclusive range.
         checkState(entropy.length == DeterministicSeed.DEFAULT_SEED_ENTROPY_BITS / 8);
-        String passphrase = ""; // FIXME allow non-empty passphrase
-        DeterministicKeyChain chain = new DeterministicKeyChain(entropy, passphrase, keyToUse.getCreationTimeSeconds());
+        String passcruase = ""; // FIXME allow non-empty passcruase
+        DeterministicKeyChain chain = new DeterministicKeyChain(entropy, passcruase, keyToUse.getCreationTimeSeconds());
         if (aesKey != null) {
             chain = chain.toEncrypted(checkNotNull(basic.getKeyCrypter()), aesKey);
         }

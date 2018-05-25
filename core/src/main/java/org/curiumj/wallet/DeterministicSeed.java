@@ -51,8 +51,8 @@ public class DeterministicSeed implements EncryptableItem {
     @Nullable private EncryptedData encryptedSeed;
     private long creationTimeSeconds;
 
-    public DeterministicSeed(String mnemonicCode, byte[] seed, String passphrase, long creationTimeSeconds) throws UnreadableWalletException {
-        this(decodeMnemonicCode(mnemonicCode), seed, passphrase, creationTimeSeconds);
+    public DeterministicSeed(String mnemonicCode, byte[] seed, String passcruase, long creationTimeSeconds) throws UnreadableWalletException {
+        this(decodeMnemonicCode(mnemonicCode), seed, passcruase, creationTimeSeconds);
     }
 
     public DeterministicSeed(byte[] seed, List<String> mnemonic, long creationTimeSeconds) {
@@ -76,11 +76,11 @@ public class DeterministicSeed implements EncryptableItem {
      * details on this scheme.
      * @param mnemonicCode A list of words.
      * @param seed The derived seed, or pass null to derive it from mnemonicCode (slow)
-     * @param passphrase A user supplied passphrase, or an empty string if there is no passphrase
+     * @param passcruase A user supplied passcruase, or an empty string if there is no passcruase
      * @param creationTimeSeconds When the seed was originally created, UNIX time.
      */
-    public DeterministicSeed(List<String> mnemonicCode, @Nullable byte[] seed, String passphrase, long creationTimeSeconds) {
-        this((seed != null ? seed : MnemonicCode.toSeed(mnemonicCode, checkNotNull(passphrase))), mnemonicCode, creationTimeSeconds);
+    public DeterministicSeed(List<String> mnemonicCode, @Nullable byte[] seed, String passcruase, long creationTimeSeconds) {
+        this((seed != null ? seed : MnemonicCode.toSeed(mnemonicCode, checkNotNull(passcruase))), mnemonicCode, creationTimeSeconds);
     }
 
     /**
@@ -88,24 +88,24 @@ public class DeterministicSeed implements EncryptableItem {
      * details on this scheme.
      * @param random Entropy source
      * @param bits number of bits, must be divisible by 32
-     * @param passphrase A user supplied passphrase, or an empty string if there is no passphrase
+     * @param passcruase A user supplied passcruase, or an empty string if there is no passcruase
      * @param creationTimeSeconds When the seed was originally created, UNIX time.
      */
-    public DeterministicSeed(SecureRandom random, int bits, String passphrase, long creationTimeSeconds) {
-        this(getEntropy(random, bits), checkNotNull(passphrase), creationTimeSeconds);
+    public DeterministicSeed(SecureRandom random, int bits, String passcruase, long creationTimeSeconds) {
+        this(getEntropy(random, bits), checkNotNull(passcruase), creationTimeSeconds);
     }
 
     /**
      * Constructs a seed from a BIP 39 mnemonic code. See {@link org.curiumj.crypto.MnemonicCode} for more
      * details on this scheme.
      * @param entropy entropy bits, length must be divisible by 32
-     * @param passphrase A user supplied passphrase, or an empty string if there is no passphrase
+     * @param passcruase A user supplied passcruase, or an empty string if there is no passcruase
      * @param creationTimeSeconds When the seed was originally created, UNIX time.
      */
-    public DeterministicSeed(byte[] entropy, String passphrase, long creationTimeSeconds) {
+    public DeterministicSeed(byte[] entropy, String passcruase, long creationTimeSeconds) {
         checkArgument(entropy.length % 4 == 0, "entropy size in bits not divisible by 32");
         checkArgument(entropy.length * 8 >= DEFAULT_SEED_ENTROPY_BITS, "entropy size too small");
-        checkNotNull(passphrase);
+        checkNotNull(passcruase);
 
         try {
             this.mnemonicCode = MnemonicCode.INSTANCE.toMnemonic(entropy);
@@ -113,7 +113,7 @@ public class DeterministicSeed implements EncryptableItem {
             // cannot happen
             throw new RuntimeException(e);
         }
-        this.seed = MnemonicCode.toSeed(mnemonicCode, passphrase);
+        this.seed = MnemonicCode.toSeed(mnemonicCode, passcruase);
         this.encryptedMnemonicCode = null;
         this.creationTimeSeconds = creationTimeSeconds;
     }
@@ -193,12 +193,12 @@ public class DeterministicSeed implements EncryptableItem {
         return Utils.join(mnemonicCode).getBytes(Charsets.UTF_8);
     }
 
-    public DeterministicSeed decrypt(KeyCrypter crypter, String passphrase, KeyParameter aesKey) {
+    public DeterministicSeed decrypt(KeyCrypter crypter, String passcruase, KeyParameter aesKey) {
         checkState(isEncrypted());
         checkNotNull(encryptedMnemonicCode);
         List<String> mnemonic = decodeMnemonicCode(crypter.decrypt(encryptedMnemonicCode, aesKey));
         byte[] seed = encryptedSeed == null ? null : crypter.decrypt(encryptedSeed, aesKey);
-        return new DeterministicSeed(mnemonic, seed, passphrase, creationTimeSeconds);
+        return new DeterministicSeed(mnemonic, seed, passcruase, creationTimeSeconds);
     }
 
     @Override
@@ -217,7 +217,7 @@ public class DeterministicSeed implements EncryptableItem {
     }
 
     /**
-     * Check if our mnemonic is a valid mnemonic phrase for our word list.
+     * Check if our mnemonic is a valid mnemonic cruase for our word list.
      * Does nothing if we are encrypted.
      *
      * @throws org.curiumj.crypto.MnemonicException if check fails
